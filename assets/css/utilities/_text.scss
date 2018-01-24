@@ -1,0 +1,54 @@
+// Horizontal text alignment
+
+.u-textCenter {
+  text-align: center !important;
+}
+
+.u-textLeft {
+  text-align: left !important;
+}
+
+.u-textRight {
+  text-align: right !important;
+}
+
+
+// Prevent whitespace wrapping
+
+.u-textNoWrap {
+  white-space: nowrap !important;
+}
+
+
+// Responsive text utilities
+@if $responsive == true {
+
+  @each $breakpoint in $breakpoints {
+
+    $alias: nth($breakpoint, 1);
+    $value: nth($breakpoint, 2);
+
+    @media (min-width: $value) {
+      .u-#{$alias}-textCenter {
+        text-align: center !important;
+      }
+
+      .u-#{$alias}-textLeft {
+        text-align: left !important;
+      }
+
+      .u-#{$alias}-textRight {
+        text-align: right !important;
+      }
+    }
+  }
+}
+
+
+//  Text size adjustment.
+//
+//  TODO: Should be built with font-size variables and/or functions
+
+.u-text-bigger {
+  font-size: 1.25em !important;
+}

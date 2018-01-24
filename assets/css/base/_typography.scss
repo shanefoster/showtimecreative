@@ -1,0 +1,212 @@
+// * 1. Base Typography Units
+
+$fontSize:          13px !default;
+$lineHeight:         1.5 !default;
+$letterSpacing: .025em !default;
+
+// * 2. Typography Utility Variables
+
+// * 2.a Font Families
+
+$primary-fontFamily:    'Source Sans Pro', Helvetica, sans-serif !default;
+
+
+// * 2.b Font Weights
+
+$base-fontWeight:      400 !default;
+$semibold-fontWeight:  600 !default;
+$bold-fontWeight:      700 !default;
+
+// * 2.c Font Sizes
+
+$xsmall-fontSize:           scaleFont($fontSize, -2) !default;
+$small-fontSize:            scaleFont($fontSize, -1) !default;
+$base-fontSize:              scaleFont($fontSize, 0) !default;
+$large-fontSize:             scaleFont($fontSize, 2) !default;
+$xlarge-fontSize:            scaleFont($fontSize, 4) !default;
+$xxlarge-fontSize:           scaleFont($fontSize, 8 ) !default;
+
+// * 2.d Font Letter Spacing
+
+$xsmall-letterSpacing: scaleFont($letterSpacing, -2) !default;
+$small-letterSpacing:  scaleFont($letterSpacing, -1) !default;
+$base-letterSpacing:    scaleFont($letterSpacing, 0) !default;
+$large-letterSpacing:   scaleFont($letterSpacing, 2) !default;
+$xlarge-letterSpacing:  scaleFont($letterSpacing, 5) !default;
+$xxlarge-letterSpacing: scaleFont($letterSpacing, 6) !default;
+
+// * 2.e Font Line Height
+
+$small-lineHeight:        scaleFont($lineHeight, -2) !default;
+$base-lineHeight:          scaleFont($lineHeight, 0) !default;
+$large-lineHeight:         scaleFont($lineHeight, 2) !default;
+
+
+$base-font-family: $primary-fontFamily !default;
+
+$base-font-color:  $text !default;
+$light-font-color: $text--light !default;
+
+$heading-font-family:                                  $primary-fontFamily !default;
+$sub-heading-font-family:                              $primary-fontFamily !default;
+
+$heading-font-color:                               $text--dark !default;
+$sub-heading-font-color:                         $text !default;
+
+$color-links:                  $primary !default;
+$color-links--hover:           scaleColor($color-links, -2) !default;
+
+
+body {
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-fontSize;
+  font-weight: $base-fontWeight;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: $base-lineHeight;
+  letter-spacing: $base-letterSpacing;
+}
+
+p, li, pre, code  {
+  line-height: $base-lineHeight;
+}
+p {
+  margin-bottom: $su-default;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+small,
+.small-text {
+  font-family: $base-font-family;
+  color:      $text--light;
+  font-size:  small-fontSize;
+  letter-spacing: $small-letterSpacing;
+}
+
+cite {
+  font-size: $small-fontSize;
+}
+
+abbr[title],
+dfn[title] {
+  cursor: help;
+}
+
+sub,
+sup {
+  font-size: 80%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+a {
+  color:          $primary;
+  cursor:             pointer;
+  text-decoration:       none;
+  background:     transparent;
+  small, span, em, i, b, strong, sub, sup {
+    color:            inherit;
+  }
+  &:hover {
+    color: $primary--dark;
+  }
+  &:active,
+  &:hover {
+    outline:                0;
+  }
+}
+
+blockquote {
+  margin: $su-small 0;
+  padding: $su-default;
+  border-top: 3px $divider solid;
+  border-bottom: 3px $divider solid;
+  strong {
+    color: $text;
+  }
+}
+
+/*--------------------/
+    Base Headings
+/--------------------*/
+
+h1, h2, h3 {
+  font-family:            $heading-font-family;
+  font-weight:                          normal;
+  text-transform:                    uppercase;
+}
+
+h4, h5, h6 {
+  font-family:               $base-font-family;
+}
+
+h1 {
+  font-size:            $xxlarge-fontSize;
+  line-height:   $base-lineHeight;
+  letter-spacing: $xxlarge-letterSpacing;
+}
+
+
+h2 {
+  font-size:          $xlarge-fontSize;
+  line-height: $base-lineHeight;
+  letter-spacing: $xlarge-letterSpacing;
+}
+
+h3 {
+  font-size:              $large-fontSize;
+  line-height:     $base-lineHeight;
+  letter-spacing: $large-letterSpacing;
+}
+
+h4 {
+  font-size:              $base-fontSize;
+  font-weight:               $semibold-fontWeight;
+  line-height:     $small-lineHeight;
+  letter-spacing: $base-letterSpacing;
+}
+
+h5 {
+  font-size:                 $small-fontSize;
+  font-weight:                $semibold-fontWeight;
+  line-height:        $small-lineHeight;
+  letter-spacing: $small-letterSpacing;
+}
+
+h6 {
+  font-size:                 $small-fontSize;
+  font-weight:               $base-fontWeight;
+  line-height:        $small-lineHeight;
+  letter-spacing: $xsmall-letterSpacing;
+}
+
+h1, h2, h3 {
+  color: $text--dark;
+}
+
+/*--------------------/
+   Element Spacing
+/--------------------*/
+
+h1, h2, h3, p, ul {
+  margin-bottom: $su-default;
+}
+
+h4, h5, h6 {
+  margin-bottom: $su-small;
+}

@@ -1,0 +1,43 @@
+---
+layout: home
+title: I'M AN EXPERIENCED PRODUCT DESIGNER
+tagline: WELCOME! MY NAME IS SHANE &
+---
+{% assign sorted = (site.works | sort: 'date') | reverse %}
+{% for works in sorted %}
+{% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+{% if thecycle == 'even' %}
+	{% assign flexreverse = 'u-flexRowReverse' %}
+	{% assign imagealign = 'u-textLeft' %}
+{% endif %}
+{% if thecycle == 'odd' %}
+	{% assign flexreverse = '' %}
+	{% assign imagealign = 'u-textRight' %}
+{% endif %}
+	<div class="Work-short">
+		<div class="Grid Grid--alignMiddle {{ flexreverse }}">
+			<div class="Grid-cell u-md-size5of12">
+				<div class="Work-summary">
+					<div class="Grid Grid--alignMiddle">
+						<div class="pull-left">
+							<h2 class="u-textCenter u-md-textLeft u-spaceNone">{{works.title}}</h2>
+						</div>
+						<div class="pull-right u-padLeftMd u-spaceLeftMd u-borderLeft">
+							<p class="u-spaceNone">{{ works.date | date: "%Y" }}</p>
+						</div>
+					</div>
+					<p>{{works.content}}</p>
+					<div class="u-displayBlock u-textCenter u-spaceBottomXLg u-md-textLeft">
+						<a href="{{ works.url }}" class="Button">View Project Details</a>
+					</div>
+				</div>
+			</div>
+			<div class="Grid-cell u-md-size7of12 {{ imagealign }}">
+					<a href="{{ works.url }}" class="Work-screenshot">
+						<img class="Work-screenshot-img" src="{{ works.image_path }}" alt="{{works.title }}">
+					</a>
+			</div>
+		</div>
+	</div>
+
+{% endfor %}

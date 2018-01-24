@@ -1,0 +1,46 @@
+//*//////////////////////////////////////////
+
+//     Foundational Structural Elements
+
+//*/////////////////////////////////////////
+.Container{
+  margin: 0 auto;
+  max-width: $max-site-width;
+  padding:0 $su-large;
+}
+@media (min-width: $breakpoint-sm) { 
+  .Container {
+    padding: 0 $su-xxlarge;
+  }
+}
+
+//  * contianing blocks
+.Container {
+  clear: both;
+  margin: 0 auto;
+  max-width: $max-site-width;
+  &:after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+[class*="__row"] {
+  padding-top:    ( $su-default * 0.34 );
+  padding-bottom: ( $su-default * 0.34 );
+
+  &[class*="--bordered"] {
+    border-bottom: 1px solid $divider;
+    margin-bottom: ( $su-default * 0.34 );
+  }
+}
+[class*="__row-med"] {
+  padding-top:    ( $su-default );
+  padding-bottom: ( $su-default );
+}
+
+[class*="__row-large"] {
+  padding-top:    ( $su-xlarge );
+  padding-bottom: ( $su-xlarge );
+}

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- HOME TEMPLATE -->
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
   {% include head.html %}
@@ -7,8 +8,12 @@
 
     {% include header.html %}
 
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
+    <main aria-label="Content">
+      {% if page.url == "/" %}
+              <h3 class="Work-section">SOME OF MY WORK</h3>
+      {% endif %}
+      
+      <div class="Container">
         {{ content }}
       </div>
     </main>

@@ -1,0 +1,27 @@
+/**
+ * Position utilities
+ */
+
+.u-pos-relative {
+  position: relative !important;
+}
+.u-pos-fixed {
+	position: fixed !important;
+}
+
+@each $breakpoint in $breakpoints {
+
+  $alias: nth($breakpoint, 1);
+  $value: nth($breakpoint, 2);
+
+  @media (min-width: $value) {
+
+    .u-#{$alias}-pos-relative {
+      position: relative !important;
+    }
+
+    .u-#{$alias}-pos-fixed{
+      position: fixed !important;
+    }
+  }
+}

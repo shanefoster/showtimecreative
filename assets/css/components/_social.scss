@@ -1,0 +1,33 @@
+.Social {
+	display: inline-block;
+	list-style: none;
+	margin:0;
+	padding: 0;
+	text-align: center;
+}
+.Social-item {
+	display: inline-block;
+}
+.Social-link {
+	display: inline-block;
+	height: 24px;
+	margin: 0 0 0 $su-small;
+	text-indent: -9999px;
+	width: 24px;
+	transition: transform .5s;
+}
+.Social-link:hover {
+	transform: translate(0, -5px);
+}
+.Social-twitter {
+	background: url('../img/twitter_dark.svg') no-repeat center center;
+}
+.Social-linkedin {
+	background: url('../img/linkedin_dark.svg') no-repeat center center;
+}
+.Social-twitter-light a{
+	background: url('img/twitter_light.svg') no-repeat center center;
+}
+.Social-linkedin-light a{
+	background: url('img/linkedin_light.svg') no-repeat center center;
+}

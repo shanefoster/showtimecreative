@@ -1,0 +1,105 @@
+/** @define Dropdown */
+.Dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.Dropdown-menu {
+  background-clip: padding-box;
+  background-color: $primary;
+  border: 1px solid $primary--dark;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right:0;
+  z-index: 100;
+}
+
+/* postcss-bem-linter: ignore */
+
+[dir="rtl"] .Dropdown-menu {
+  left: auto;
+  right: -99999px;
+}
+
+.Dropdown.is-expanded .Dropdown-menu {
+  left: auto;
+}
+
+/* postcss-bem-linter: ignore */
+
+[dir="rtl"] .Dropdown.is-expanded .Dropdown-menu {
+  right: auto;
+}
+
+/**
+ * Modifier: Dropdown-menu--inversePlacement
+ * Inverts the dropdown menu position by placing it on the right.
+ * If the direction is explicitly set to rtl [dir="rtl"]
+ * then it places the dropdown menu on the left.
+ */
+
+.Dropdown.is-expanded .Dropdown-menu--inversePlacement {
+  left: auto;
+  right: 0;
+}
+
+/* postcss-bem-linter: ignore */
+
+[dir="rtl"] .Dropdown.is-expanded .Dropdown-menu--inversePlacement {
+  left: 0;
+  right: auto;
+}
+
+/**
+ * Modifier: Dropdown-menu--upPlacement
+ * Shows the dropdown menu at the bottom
+ */
+
+.Dropdown-menu--upPlacement {
+  bottom: 100%;
+}
+
+.Dropdown-item,
+.Dropdown-link {
+  display: block;
+}
+
+.Dropdown-item {
+  white-space: nowrap;
+}
+
+.Dropdown-item--separated {
+  border-top: 1px solid $primary--dark;
+}
+
+.Dropdown-link {
+  border-bottom:1px solid $primary--dark;
+  color: $white;
+  display: block;
+  padding: $su-default $su-large;
+  text-align: center;
+  text-decoration: none;
+}
+
+.Dropdown-link:active,
+.Dropdown-link:hover,
+.Dropdown-link:focus,
+.Dropdown-link.is-active,
+.Dropdown-item.is-active,
+.Dropdown-item.is-active > .Dropdown-link {
+  background-color: $primary--hover;
+  color: $white--hover;
+}
+
+.Dropdown-link:active {
+  box-shadow: inset 0 0 99999px rgba(0, 0, 0, 0.3);
+}
+
+.Dropdown--primary {
+  .Dropdown-toggle, .Dropdown-link{
+    color: $white;
+  }
+}

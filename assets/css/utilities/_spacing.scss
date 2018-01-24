@@ -1,0 +1,148 @@
+//  **
+//  Spacing utilities
+//
+//  .u-[breakpoint]-space[Position][Size]
+//  .u-[breakpoint]-pad[Position][Size]
+//
+//  Where [breakpoint] is:
+//  (null = all), 'xs', 'sm', 'md', 'lg'
+//
+//  Where [Position] is:
+//  (null = all), 'Top', 'Bottom', 'Right', 'Left', 'Sides', 'Ends'
+//
+//  Where [size] is:
+//  'None', 'Xs', 'Sm', 'Md', 'Lg'
+//
+//  eg:
+//  `u-spaceNone`, `u-md-spaceLeftMd`, `u-lg-spaceEndsLg`
+//  `u-xs-padTopMd`, `u-padSidesXl`
+//
+
+$spaces: (
+  ('None', 0),
+  ('Xs', $su-xsmall),
+  ('Sm', $su-small),
+  ('Md', $su-default),
+  ('Lg', $su-large),
+  ('XLg', $su-xlarge),
+  ('XXLg', $su-xxlarge)
+);
+
+@each $space in $spaces {
+
+  $space-name: nth($space, 1);
+  $space-value: nth($space, 2);
+
+  .u-space#{$space-name},
+  .u-spaceTop#{$space-name},
+  .u-spaceEnds#{$space-name} {
+   margin-top: $space-value !important;
+  }
+  .u-space#{$space-name},
+  .u-spaceBottom#{$space-name},
+  .u-spaceEnds#{$space-name} {
+   margin-bottom: $space-value !important;
+  }
+  .u-space#{$space-name},
+  .u-spaceRight#{$space-name},
+  .u-spaceSides#{$space-name} {
+   margin-right: $space-value !important;
+  }
+  .u-space#{$space-name},
+  .u-spaceLeft#{$space-name},
+  .u-spaceSides#{$space-name} {
+   margin-left: $space-value !important;
+  }
+  .u-pad#{$space-name},
+  .u-padTop#{$space-name},
+  .u-padEnds#{$space-name} {
+   padding-top: $space-value !important;
+  }
+  .u-pad#{$space-name},
+  .u-padBottom#{$space-name},
+  .u-padEnds#{$space-name} {
+   padding-bottom: $space-value !important;
+  }
+  .u-pad#{$space-name},
+  .u-padRight#{$space-name},
+  .u-padSides#{$space-name} {
+   padding-right: $space-value !important;
+  }
+  .u-pad#{$space-name},
+  .u-padLeft#{$space-name},
+  .u-padSides#{$space-name} {
+   padding-left: $space-value !important;
+  }
+}
+
+@if $responsive == true {
+
+  @each $breakpoint in $breakpoints {
+
+    $alias: nth($breakpoint, 1);
+    $value: nth($breakpoint, 2);
+
+    @media (min-width: $value) {
+
+      @each $space in $spaces {
+
+        $space-name: nth($space, 1);
+        $space-value: nth($space, 2);
+
+        .u-#{$alias}-space#{$space-name},
+        .u-#{$alias}-spaceTop#{$space-name},
+        .u-#{$alias}-spaceEnds#{$space-name} {
+         margin-top: $space-value !important;
+        }
+        .u-#{$alias}-space#{$space-name},
+        .u-#{$alias}-spaceBottom#{$space-name},
+        .u-#{$alias}-spaceEnds#{$space-name} {
+         margin-bottom: $space-value !important;
+        }
+        .u-#{$alias}-space#{$space-name},
+        .u-#{$alias}-spaceRight#{$space-name},
+        .u-#{$alias}-spaceSides#{$space-name} {
+         margin-right: $space-value !important;
+        }
+        .u-#{$alias}-space#{$space-name},
+        .u-#{$alias}-spaceLeft#{$space-name},
+        .u-#{$alias}-spaceSides#{$space-name} {
+         margin-left: $space-value !important;
+        }
+        .u-#{$alias}-pad#{$space-name},
+        .u-#{$alias}-padTop#{$space-name},
+        .u-#{$alias}-padEnds#{$space-name} {
+         padding-top: $space-value !important;
+        }
+        .u-#{$alias}-pad#{$space-name},
+        .u-#{$alias}-padBottom#{$space-name},
+        .u-#{$alias}-padEnds#{$space-name} {
+         padding-bottom: $space-value !important;
+        }
+        .u-#{$alias}-pad#{$space-name},
+        .u-#{$alias}-padRight#{$space-name},
+        .u-#{$alias}-padSides#{$space-name} {
+         padding-right: $space-value !important;
+        }
+        .u-#{$alias}-pad#{$space-name},
+        .u-#{$alias}-padLeft#{$space-name},
+        .u-#{$alias}-padSides#{$space-name} {
+         padding-left: $space-value !important;
+        }
+      }
+    }
+  }
+}
+
+
+@mixin make-space-between-utils($size, $space-value) {
+  .u-space-between#{$size}:not(:first-child) {
+    margin-top: $space-value !important;
+  }
+}
+
+@include make-space-between-utils(null,    $su-default);
+@include make-space-between-utils(-small,  $su-small);
+@include make-space-between-utils(-xsmall, $su-xsmall);
+@include make-space-between-utils(-large,  $su-large);
+@include make-space-between-utils(-xlarge, $su-xlarge);

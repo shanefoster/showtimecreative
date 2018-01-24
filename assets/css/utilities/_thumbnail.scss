@@ -1,0 +1,20 @@
+.Thumbnail {
+  position:             relative;
+}
+.Thumbnail-image {
+  border-radius: $border-radius;
+}
+.Thumbnail-title {
+  background:         $secondary;
+  -webkit-border-top-left-radius: $border-radius;
+  -webkit-border-bottom-right-radius: $border-radius;
+  -moz-border-radius-topleft: $border-radius;
+  -moz-border-radius-bottomright: $border-radius;
+  border-top-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
+  bottom:                   11px;
+  color:                   $text;
+  padding: $su-xsmall $su-default;
+  position:             absolute;
+  right:                       1px;
+}

@@ -1,0 +1,53 @@
+/**
+ * Percentage based size classes for a 24 column grid
+ *
+ * .u-size1of24,
+ * .u-size2of24,
+ *  .....
+ * .u-size23of24,
+ * .u-size-full
+ *
+ */
+
+$cols: (2, 3, 4, 6, 8, 12, 24);
+
+@each $col in $cols {
+  @for $i from 1 through ($col - 1) {
+    .u-size#{$i}of#{$col} {
+      flex-basis: $i / $col * 100% !important;
+      width: $i / $col * 100% !important;
+    }
+  }
+}
+
+.u-size-full {
+  flex-basis: auto !important;
+  width: 100% !important;
+}
+
+@if $responsive == true {
+
+  @each $breakpoint in $breakpoints {
+
+    $alias: nth($breakpoint, 1);
+    $value: nth($breakpoint, 2);
+
+    @media (min-width: $value) {
+
+      @each $col in $cols {
+        @for $i from 1 through ($col - 1) {
+          .u-#{$alias}-size#{$i}of#{$col} {
+            flex-basis: auto !important;
+            width: $i / $col * 100% !important;
+          }
+        }
+      }
+
+      .u-#{$alias}-size-full,
+      .u-#{$alias}-size1of1 {
+        flex-basis: auto !important;
+        width: 100% !important;
+      }
+    }
+  }
+}

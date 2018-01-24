@@ -1,0 +1,79 @@
+// * 1. min-width()
+
+// * Example
+//
+//   .Component {
+//    /styles/
+//    @include min-width('md') {
+//      /responsive styles/
+//    }
+//   }
+
+@mixin min-width($width) {
+
+  @if $width == xs {
+    @media only screen and (min-width: $breakpoint-xs) {
+      @content;
+    }
+  }
+
+  @else if $width == sm {
+    @media only screen and (min-width: $breakpoint-sm) {
+      @content;
+    }
+  }
+
+  @else if $width == md {
+    @media only screen and (min-width: $breakpoint-md) {
+      @content;
+    }
+  }
+
+  @else if $width == lg {
+    @media only screen and (min-width: $breakpoint-lg) {
+      @content;
+    }
+  }
+}
+
+// * 2. max-width()
+
+// * Example
+//
+//   .Component {
+//    /styles/
+//    @include max-width('md') {
+//      /responsive styles/
+//    }
+//   }
+
+@mixin max-width($width) {
+
+  @if $responsive == true {
+
+    @if $width == xs {
+      @media only screen and (max-width: ($breakpoint-xs - 1px)) {
+        @content;
+      }
+    }
+
+    @else if $width == sm {
+      @media only screen and (max-width: ($breakpoint-sm - 1px)) {
+        @content;
+      }
+    }
+
+    @else if $width == md {
+      @media only screen and (max-width: ($breakpoint-md - 1px)) {
+        @content;
+      }
+    }
+
+    @else if $width == lg {
+      @media only screen and (max-width: ($breakpoint-lg - 1px)) {
+        @content;
+      }
+    }
+  }
+}
+

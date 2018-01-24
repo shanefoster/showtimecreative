@@ -1,0 +1,35 @@
+.Work-short {
+	border-bottom: 1px solid $divider;
+	margin:         0 0 $su-xxxxlarge 0;
+	padding:        0 0 $su-xxxxlarge 0;
+}
+.Work-section {
+	padding:    $su-xxlarge;
+	text-align:      center;
+
+	&:after {
+		background: transparent url('../img/arrow_down.svg') no-repeat center center;
+		content:"";
+		display: block;
+		height:18px;
+		text-align: center;
+		width:100%;
+	}
+}
+@media (min-width: $breakpoint-sm) { 
+  .Work-section {
+    padding:    $su-default;
+  }
+}
+
+.Work-screenshot-img:hover {
+	transform: translate(0, -5px);
+}
+.Work-screenshot-img {
+	transition: transform .5s;
+}
+@media (min-width: $breakpoint-sm) { 
+  .Work-screenshot-img{
+    max-width: 90%;
+  }
+}

@@ -1,0 +1,44 @@
+// 1. Shared Stle Settings
+
+$box-shadow:        0 0 3px rgba($text, .25) !default;
+$box-shadow--small: 0 0 2px rgba($text, .15) !default;
+
+$border-radius:                     scaleGrid(.5) !default;
+$border-radius--small:             scaleGrid(.25) !default;
+$border-radius--large:               scaleGrid(1) !default;
+
+$border-radius-small:  scaleGrid(.25) !default;
+$border-radius-medium:  scaleGrid(.5) !default;
+$border-radius-large:    scaleGrid(1) !default;
+
+$border-width-small:             1px !default;
+$border-width-medium: scaleGrid(.25) !default;
+$border-width-large:   scaleGrid(.5) !default;
+
+$default-border-radius:    $border-radius--large !default;
+
+// 2. Base Button Settings
+
+$button-style:                            raised !default;
+
+$button-border-radius:            $border-radius !default;
+$button-height:                       $su-xlarge !default;
+$button-height--large:               $su-xxlarge !default;
+$button-height--small:                 $su-large !default;
+
+$button-color:                    $foreground !default;
+$button-border-color:                $divider !default;
+$button-text-color:                  $text !default;
+
+
+
+$form-input-bg-color:                 $background !default;
+$form-input-height:                  scaleGrid(4) !default;
+$form-input-line-height:             scaleGrid(4) !default;
+
+$form-select-bg-color:                $background !default;
+$form-select-text-color:             $text--light !default;
+$form-select-height:                 scaleGrid(4) !default;
+$form-select-line-height:            scaleGrid(4) !default;
+
+

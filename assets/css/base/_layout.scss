@@ -1,0 +1,40 @@
+// * 1. Spacing Utility Variables
+
+$su-xxsmall:   scaleGrid(.25) !default; // 2px
+$su-xsmall:     scaleGrid(.5) !default; // 4px
+$su-small:       scaleGrid(1) !default; // 8px
+$su-default:     scaleGrid(2) !default; // 16px
+$su-large:       scaleGrid(3) !default; // 24px
+$su-xlarge:      scaleGrid(4) !default; // 32px
+$su-xxlarge:     scaleGrid(6) !default; // 48px
+$su-xxxxlarge:   scaleGrid(10) !default; // 48px
+
+// * 2. Responsive Variables
+
+$responsive: true !default;
+
+$max-site-width: 1440px !default;
+$min-site-width: 1200px !default;
+
+$breakpoint-xs: 0;
+$breakpoint-sm: 0;
+$breakpoint-md: 0;
+$breakpoint-lg: 0;
+
+@if $responsive == true {
+  $max-site-width: 1440px;
+  $min-site-width: 0;
+
+  $breakpoint-xs: 480px;
+  $breakpoint-sm: 768px;
+  $breakpoint-md: 992px;
+  $breakpoint-lg: 1200px;
+}
+
+$breakpoints: (
+  ('xs',  $breakpoint-xs),
+  ('sm',  $breakpoint-sm),
+  ('md',  $breakpoint-md),
+  ('lg', $breakpoint-lg)
+);
+
