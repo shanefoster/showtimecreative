@@ -58,7 +58,7 @@
 
 <ul class="Pagination">
 	{% if prevPost.url %}
-  <li><a class="Pagination-button Pagination-left" href="{{ site.baseurl}}/{{ prevPost.url }}"></a></li><!--
-  -->{% endif %}<li><a href="{{ site.baseurl }}/" class="Pagination-button Pagination-home"></a></li><!--
-  -->{% if nextPost.url %}<li><a class="Pagination-button Pagination-right" href="{{ site.baseurl}}/{{ nextPost.url }}"></a></li>{% endif %}
+  <li><a class="Pagination-button Pagination-left" href="{{ prevPost.url }}"></a></li><!--
+  -->{% endif %}<li><a href="/" class="Pagination-button Pagination-home"></a></li><!--
+  -->{% if nextPost.url %}<li><a class="Pagination-button Pagination-right" href="{{ nextPost.url }}"></a></li>{% endif %}
 </ul>
