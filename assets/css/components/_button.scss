@@ -39,9 +39,9 @@
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  transition: border-color .25s ease-in-out;
-  -moz-transition: border-color .25s ease-in-out;
-  -webkit-transition: border-color .25s ease-in-out;
+  transition: all .25s ease-in-out;
+  -moz-transition: all .25s ease-in-out;
+  -webkit-transition: all .25s ease-in-out;
   user-select: none; /* 4 */
 }
 
@@ -70,4 +70,15 @@
 .Button.is-disabled {
   cursor: default;
   opacity: var(--Button-disabled-opacity);
+}
+
+.Button-secondary {
+  background:             none;
+  border: 1px solid $secondary;
+  color:            $secondary;
+
+  &:hover {
+    border:1px solid $secondary--hover;
+    color:               $white--hover;
+  }
 }

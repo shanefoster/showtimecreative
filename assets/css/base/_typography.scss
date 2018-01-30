@@ -52,6 +52,7 @@ $sub-heading-font-family:                              $primary-fontFamily !defa
 
 $heading-font-color:                               $text--dark !default;
 $sub-heading-font-color:                         $text !default;
+                        
 
 $color-links:                  $link !default;
 $color-links--hover:           $link--hover !default;
@@ -196,7 +197,7 @@ h6 {
 }
 
 h1, h2, h3 {
-  color: $text--dark;
+  color: $primary;
 }
 
 /*--------------------/

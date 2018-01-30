@@ -1,6 +1,12 @@
 footer {
-	font-size: $small-fontSize;
-	border-top:1px solid $divider; 
-	padding: $su-default;
-	text-align:right;
+	background:                #0f1318;
+	border-top:     1px solid $divider; 
+	color:                     #DFEDEB;
+	padding:       $su-xxxxlarge 0 0 0;
+	text-align:                 center;
+}
+.Footer-sub {
+	border-top:1px solid $primary--hover;
+	margin-top: $su-large;
+	padding: $su-large;
 }

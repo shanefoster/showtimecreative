@@ -9,6 +9,9 @@
 	display: inline-block;
 }
 .Social-link {
+	background-size: contain;
+	background-position: center center;
+	background-repeat: no-repeat;
 	display: inline-block;
 	height: 24px;
 	margin: 0 0 0 $su-small;
@@ -20,14 +23,14 @@
 	transform: translate(0, -5px);
 }
 .Social-twitter {
-	background: url('../img/twitter_dark.svg') no-repeat center center;
+	background-image: url('../img/twitter_dark.svg');
 }
 .Social-linkedin {
-	background: url('../img/linkedin_dark.svg') no-repeat center center;
+	background-image: url('../img/linkedin_dark.svg');
 }
-.Social-twitter-light a{
-	background: url('img/twitter_light.svg') no-repeat center center;
+.Social-twitter-light {
+	background-image: url('../img/twitter_light.svg');
 }
-.Social-linkedin-light a{
-	background: url('img/linkedin_light.svg') no-repeat center center;
+.Social-linkedin-light {
+	background-image: url('../img/linkedin_light.svg');
 }

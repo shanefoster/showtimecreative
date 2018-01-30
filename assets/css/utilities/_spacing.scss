@@ -25,7 +25,9 @@ $spaces: (
   ('Md', $su-default),
   ('Lg', $su-large),
   ('XLg', $su-xlarge),
-  ('XXLg', $su-xxlarge)
+  ('XXLg', $su-xxlarge),
+  ('XXXXLg', $su-xxxxlarge),
+
 );
 
 @each $space in $spaces {

@@ -1,6 +1,11 @@
 .u-colorPrimary {
-  color: $primary;
+  color: $primary !important;
 }
-
+.u-headingAlt {
+	color: $white !important;
+} 
+.u-textAlt {
+	color: $text--light !important;
+}
 
 
