@@ -2,12 +2,34 @@
 	border-bottom: 1px solid $divider;
 	margin:         0 0 $su-xxxxlarge 0;
 	padding:        0 0 $su-xxxxlarge 0;
+
+	&:last-child {
+		border:none;
+		margin: 0;
+	}
+}
+.Work-short-title {
+	flex-basis: auto !important;
+	text-align: center;
+  width: 100% !important;
+}
+.Work-short-date {
+	flex-basis: auto !important;
+	text-align: center;
+  width: 100% !important;
+}
+@media (min-width: $breakpoint-sm) { 
+  .Work-short-title, .Work-short-date {
+    float:left !important;
+    width: auto !important;
+  }
 }
 .Work-section {
 	padding:    $su-xxlarge;
 	text-align:      center;
-
-	&:after {
+}
+.Work-section-arrow {
+		&:after {
 		background: transparent url('../img/arrow_down.svg') no-repeat center center;
 		content:"";
 		display: block;
@@ -32,4 +54,7 @@
   .Work-screenshot-img{
     max-width: 90%;
   }
+}
+.Work-full {
+	max-width:10em;
 }

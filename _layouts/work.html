@@ -11,7 +11,16 @@
     <main aria-label="Content">
 
       <div class="Container">
-        {{ content }}
+        <div class="Grid Grid--alignCenter">
+          <div class="u-size-full u-textCenter">
+          </div>
+          <div class="Grid-cell u-size-full u-md-size3of4">
+              {{ content }}
+          </div>
+        </div>
+        <div class="u-size-full u-textCenter u-spaceTopLg">
+          {% include pagination.html %}
+        </div>
       </div>
     </main>
 

@@ -1,0 +1,56 @@
+.Pagination {
+	margin:0 0 $su-xxlarge 0;
+}
+	.Pagination li {
+		display: inline-block;
+	}
+		.Pagination-button {
+			background:#fff;
+			border:1px solid $divider;
+			display: inline-block;
+			height: 30px;
+			width: 30px;
+		}
+		.Pagination-button:hover {
+			background: #f4f4f4;
+			background-size: 70%;
+		}
+		.Pagination-left {
+			background: #fff url('../img/arrow_left.svg') no-repeat center center;
+			background-size: 70%;
+			border-right:none;
+			-webkit-border-top-left-radius: $border-radius;
+			-webkit-border-bottom-left-radius: $border-radius;
+			-moz-border-radius-topleft: $border-radius;
+			-moz-border-radius-bottomleft: $border-radius;
+			border-top-left-radius: $border-radius;
+			border-bottom-left-radius: $border-radius;
+		}
+		.Pagination-left:hover {
+			background: $white--hover url('../img/arrow_left.svg') no-repeat center center;
+			background-size: 70%;
+		}
+		.Pagination-right {
+			background: #fff url('../img/arrow_right.svg') no-repeat center center;
+			background-size: 70%;
+			border-left:none;
+			-webkit-border-top-right-radius: $border-radius;
+			-webkit-border-bottom-right-radius: $border-radius;
+			-moz-border-radius-topright: $border-radius;
+			-moz-border-radius-bottomright: $border-radius;
+			border-top-right-radius: $border-radius;
+			border-bottom-right-radius: $border-radius;
+		}
+		.Pagination-right:hover {
+			background: $white--hover url('../img/arrow_right.svg') no-repeat center center;
+			background-size: 70%;
+		}
+		.Pagination-home {
+			background: #fff url('../img/home.svg') no-repeat center center;
+			background-size: 50%;
+		}
+		.Pagination-home:hover {
+			background: $white--hover url('../img/home.svg') no-repeat center center;
+			background-size: 50%;
+		}
+

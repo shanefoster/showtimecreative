@@ -3,7 +3,7 @@ layout: home
 title: I'M AN EXPERIENCED PRODUCT DESIGNER
 tagline: WELCOME! MY NAME IS SHANE &
 ---
-{% assign sorted = (site.works | sort: 'date') | reverse %}
+{% assign sorted = site.works | sort: 'date' | reverse %}
 {% for works in sorted %}
 {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
 {% if thecycle == 'even' %}
@@ -19,21 +19,19 @@ tagline: WELCOME! MY NAME IS SHANE &
 			<div class="Grid-cell u-md-size5of12">
 				<div class="Work-summary">
 					<div class="Grid Grid--alignMiddle">
-						<div class="pull-left">
-							<h2 class="u-textCenter u-md-textLeft u-spaceNone">{{works.title}}</h2>
-						</div>
-						<div class="pull-right u-padLeftMd u-spaceLeftMd u-borderLeft">
-							<p class="u-spaceNone">{{ works.date | date: "%Y" }}</p>
-						</div>
+							<h2 class="Work-short-title">{{works.title}}</h2>
+							<p class="Work-short-date u-sm-spaceLeftMd u-sm-padLeftMd u-sm-borderLeft">{{ works.date | date: "%Y" }}</p>
 					</div>
-					<p>{{works.content}}</p>
-					<div class="u-displayBlock u-textCenter u-spaceBottomXLg u-md-textLeft">
-						<a href="{{ works.url }}" class="Button">View Project Details</a>
+					<p>{{works.excerpt1}}</p>
+					<p>{{works.excerpt2}}</p>
+					<div class="u-displayBlock u-textCenter u-spaceEndsXXLg u-md-textLeft">
+						<a href="{{ site.baseurl}}{{works.url }}" class="Button">View Project Details →
+</a>
 					</div>
 				</div>
 			</div>
 			<div class="Grid-cell u-md-size7of12 {{ imagealign }}">
-					<a href="{{ works.url }}" class="Work-screenshot">
+					<a href="{{ site.baseurl}}{{works.url }}" class="Work-screenshot">
 						<img class="Work-screenshot-img" src="{{ works.image_path }}" alt="{{works.title }}">
 					</a>
 			</div>

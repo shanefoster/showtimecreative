@@ -4,15 +4,15 @@
       <div class="Grid-cell u-size1of2">
         {% assign default_paths = site.pages | map: "path" %}
         {% assign page_paths = site.header_pages | default: default_paths %}
-        <a class="Header__logo" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+        <a class="Header-logo" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
       </div>
       <div class="Grid-cell u-size1of2 u-textRight">
         <ul class="Social">
           <li class="Social-item">
-            <a class="Social-link Social-twitter" href="http://twitter.com/shane_foster14">Twitter</a>
+            <a  target="_blank" class="Social-link Social-twitter" href="http://twitter.com/shane_foster14">Twitter</a>
           </li>
           <li class="Social-item">
-            <a class="Social-link Social-linkedin" href="https://www.linkedin.com/in/shanetfoster">LinkedIn</a>
+            <a target="_blank" class="Social-link Social-linkedin" href="https://www.linkedin.com/in/shanetfoster">LinkedIn</a>
           </li>
         </ul>
       </div>
@@ -22,16 +22,25 @@
     <div class="Container">
       <div class="Grid-cell u-size-full">
         {% if page.url == "/" %}
-          <img src="{{site.baseurl}}/assets/img/shane_foster_designer.jpg">
+          <img class="Header-ginger" src="{{site.baseurl}}/assets/img/shane_foster_designer.jpg">
         {% endif %}
 
         
-        <p class="Header__tagline u-spaceBottomNone">
+        <p class="Header-tagline u-spaceBottomNone">
           {% if page.tagline %}{{page.tagline}}{% endif %}
         </p>
-        <h1 class="Header__title">
+        <h1 class="Header-title">
           {{ page.title }}
         </h1>
+          {% if page.url == "/" %}
+            <small>(I'M ALSO PRETTY TALL)</small>
+          {% else %}
+            <p class="Header-subtitle">
+              {{ page.date | date: "%Y" }}
+            </p>
+            {% include pagination.html %}
+          {% endif %}
+        </p>
       </div>
     </div>
   </div>

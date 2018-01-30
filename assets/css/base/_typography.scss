@@ -53,8 +53,8 @@ $sub-heading-font-family:                              $primary-fontFamily !defa
 $heading-font-color:                               $text--dark !default;
 $sub-heading-font-color:                         $text !default;
 
-$color-links:                  $primary !default;
-$color-links--hover:           scaleColor($color-links, -2) !default;
+$color-links:                  $link !default;
+$color-links--hover:           $link--hover !default;
 
 
 body {
@@ -115,15 +115,15 @@ sub {
 }
 
 a {
-  color:          $primary;
+  color:          $link;
   cursor:             pointer;
-  text-decoration:       none;
+  text-decoration:       underline;
   background:     transparent;
   small, span, em, i, b, strong, sub, sup {
     color:            inherit;
   }
   &:hover {
-    color: $primary--dark;
+    color: $link--hover;
   }
   &:active,
   &:hover {

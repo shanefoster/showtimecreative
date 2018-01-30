@@ -21,11 +21,13 @@ baseurl: "/showtimecreative" # the subpath of your site, e.g. /blog
 url: "http://showtimecreative.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
+excerpt_separator: <!--more-->
 
 #Collections
 collections:
   works:
     output: true
+    permalink: /:collection/:title/
 
 # Build settings
 markdown: kramdown

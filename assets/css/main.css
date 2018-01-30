@@ -168,14 +168,14 @@ sub {
   bottom: -0.25em; }
 
 a {
-  color: #393B3C;
+  color: #06A68E;
   cursor: pointer;
-  text-decoration: none;
+  text-decoration: underline;
   background: transparent; }
   a small, a span, a em, a i, a b, a strong, a sub, a sup {
     color: inherit; }
   a:hover {
-    color: #2D3031; }
+    color: #038874; }
   a:active, a:hover {
     outline: 0; }
 
@@ -329,20 +329,25 @@ header {
 @media (min-width: 768px) {
   header {
     padding: 24px 0 0 0; } }
-.Header__logo {
+.Header-logo {
   background: transparent url("../img/showtime_creative_logo.svg") no-repeat center center;
   display: block;
   height: 40px;
   width: 50px;
   text-indent: -999px; }
 
-.Header__title {
+.Header-ginger {
+  height: 72px;
+  width: 72px; }
+
+.Header-title {
   letter-spacing: 0.0222222222em;
   line-height: 1.1851851852;
   margin: 0; }
 
 main {
-  background: transparent url("../img/body_gradient.png") repeat-x left top; }
+  background: transparent url("../img/body_gradient.png") repeat-x left top;
+  position: relative; }
 
 footer {
   font-size: 12px;
@@ -458,7 +463,7 @@ footer {
 .Button {
   background: #fff;
   border-color: #DEDEDE;
-  border-radius: 3px;
+  border-radius: 4px;
   border-style: solid;
   border-width: 1px;
   box-sizing: border-box;
@@ -478,9 +483,6 @@ footer {
   -webkit-transition: border-color .25s ease-in-out;
   user-select: none;
   /* 4 */ }
-
-.Social-link:hover {
-  transform: translate(0, -5px); }
 
 /**
  * Remove excess padding and border in Firefox 4+
@@ -548,17 +550,35 @@ footer {
   border-bottom: 1px solid #e6e6e6;
   margin: 0 0 80px 0;
   padding: 0 0 80px 0; }
+  .Work-short:last-child {
+    border: none;
+    margin: 0; }
 
+.Work-short-title {
+  flex-basis: auto !important;
+  text-align: center;
+  width: 100% !important; }
+
+.Work-short-date {
+  flex-basis: auto !important;
+  text-align: center;
+  width: 100% !important; }
+
+@media (min-width: 768px) {
+  .Work-short-title, .Work-short-date {
+    float: left !important;
+    width: auto !important; } }
 .Work-section {
   padding: 48px;
   text-align: center; }
-  .Work-section:after {
-    background: transparent url("../img/arrow_down.svg") no-repeat center center;
-    content: "";
-    display: block;
-    height: 18px;
-    text-align: center;
-    width: 100%; }
+
+.Work-section-arrow:after {
+  background: transparent url("../img/arrow_down.svg") no-repeat center center;
+  content: "";
+  display: block;
+  height: 18px;
+  text-align: center;
+  width: 100%; }
 
 @media (min-width: 768px) {
   .Work-section {
@@ -572,6 +592,69 @@ footer {
 @media (min-width: 768px) {
   .Work-screenshot-img {
     max-width: 90%; } }
+.Work-full {
+  max-width: 10em; }
+
+.Image {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  padding: 16px; }
+
+.Pagination {
+  margin: 0 0 48px 0; }
+
+.Pagination li {
+  display: inline-block; }
+
+.Pagination-button {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  display: inline-block;
+  height: 30px;
+  width: 30px; }
+
+.Pagination-button:hover {
+  background: #f4f4f4;
+  background-size: 70%; }
+
+.Pagination-left {
+  background: #fff url("../img/arrow_left.svg") no-repeat center center;
+  background-size: 70%;
+  border-right: none;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px; }
+
+.Pagination-left:hover {
+  background: #fcfcfc url("../img/arrow_left.svg") no-repeat center center;
+  background-size: 70%; }
+
+.Pagination-right {
+  background: #fff url("../img/arrow_right.svg") no-repeat center center;
+  background-size: 70%;
+  border-left: none;
+  -webkit-border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -moz-border-radius-bottomright: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px; }
+
+.Pagination-right:hover {
+  background: #fcfcfc url("../img/arrow_right.svg") no-repeat center center;
+  background-size: 70%; }
+
+.Pagination-home {
+  background: #fff url("../img/home.svg") no-repeat center center;
+  background-size: 50%; }
+
+.Pagination-home:hover {
+  background: #fcfcfc url("../img/home.svg") no-repeat center center;
+  background-size: 50%; }
+
 .u-verticalAlignTop {
   vertical-align: top !important; }
 
