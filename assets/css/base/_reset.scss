@@ -7,11 +7,12 @@ html {
 
 
 body {
+  background: #071514;
   font-family: 'Source Sans Pro', Helvetica, sans-serif;
 }
 @media (min-width: $breakpoint-sm) { 
   body {
-    background: #fff url('../img/body_back.png') no-repeat left top;
+    background: #071514 url('../img/body_back_dark.png') no-repeat left top;
   }
 }
 

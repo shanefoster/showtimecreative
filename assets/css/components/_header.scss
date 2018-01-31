@@ -10,7 +10,7 @@ header {
 }
 
 .Header-logo {
-		background: transparent url('../img/showtime_creative_logo.svg') no-repeat center center;
+		background: transparent url('../img/showtime_creative_logo_light.svg') no-repeat center center;
 		display: block;
 		height: 40px;
 		width: 50px;
@@ -20,12 +20,22 @@ header {
 	height:72px;
 	width: 72px;
 }
+.Header-details-home {
+	margin-top: $su-xxxxlarge;
+}
+.Header-details-work {
+	margin-top:120px;
+}
+.Header-tagline, .Header-subtitle {
+	color: #E4CA2F;
+}
 .Header-title {
+	color:                 $white--hover;
 	letter-spacing: $small-letterSpacing;
 	line-height:       $small-lineHeight;
 	margin: 0;
 }
 main {
-	background: transparent url('../img/body_gradient.png') repeat-x left top;
+	background: #fff;
 	position: relative;
 }
