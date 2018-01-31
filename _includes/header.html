@@ -9,20 +9,25 @@
       <div class="Grid-cell u-size1of2 u-textRight">
         <ul class="Social">
           <li class="Social-item">
-            <a  target="_blank" class="Social-link Social-twitter" href="http://twitter.com/shane_foster14">Twitter</a>
+            <a  target="_blank" class="Social-link Social-twitter-light" href="http://twitter.com/shane_foster14">Twitter</a>
           </li>
           <li class="Social-item">
-            <a target="_blank" class="Social-link Social-linkedin" href="https://www.linkedin.com/in/shanetfoster">LinkedIn</a>
+            <a target="_blank" class="Social-link Social-linkedin-light" href="https://www.linkedin.com/in/shanetfoster">LinkedIn</a>
           </li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="Masthead Grid Grid--alignMiddle">
+  <div class="Masthead Grid">
     <div class="Container">
-      <div class="Grid-cell u-size-full">
+      {% if page.url == "/" %}
+        {% assign headerDetails = "Header-details-home"%}
+      {% else %}
+        {% assign headerDetails = "Header-details-work" %}
+      {% endif %}
+      <div class="Grid-cell u-size-full {{ headerDetails }}">
         {% if page.url == "/" %}
-          <img class="Header-ginger" src="assets/img/shane_foster_designer.jpg">
+          <img class="Header-ginger" src="assets/img/shane_foster_designer_dark.jpg">
         {% endif %}
 
         

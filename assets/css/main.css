@@ -5,11 +5,12 @@ html {
   box-sizing: border-box; }
 
 body {
+  background: #071514;
   font-family: 'Source Sans Pro', Helvetica, sans-serif; }
 
 @media (min-width: 768px) {
   body {
-    background: #fff url("../img/body_back.png") no-repeat left top; } }
+    background: #071514 url("../img/body_back_dark.png") no-repeat left top; } }
 *, *:before, *:after {
   box-sizing: inherit; }
 
@@ -330,7 +331,7 @@ header {
   header {
     padding: 24px 0 0 0; } }
 .Header-logo {
-  background: transparent url("../img/showtime_creative_logo.svg") no-repeat center center;
+  background: transparent url("../img/showtime_creative_logo_light.svg") no-repeat center center;
   display: block;
   height: 40px;
   width: 50px;
@@ -340,23 +341,34 @@ header {
   height: 72px;
   width: 72px; }
 
+.Header-details-home {
+  margin-top: 80px; }
+
+.Header-details-work {
+  margin-top: 120px; }
+
+.Header-tagline, .Header-subtitle {
+  color: #E4CA2F; }
+
 .Header-title {
+  color: #fcfcfc;
   letter-spacing: 0.0222222222em;
   line-height: 1.1851851852;
   margin: 0; }
 
 main {
-  background: transparent url("../img/body_gradient.png") repeat-x left top;
+  background: #fff;
   position: relative; }
 
 footer {
-  background: #0f1318;
+  background: #0f1318 url("../img/footer_back.png") repeat-x left top;
   border-top: 1px solid #e6e6e6;
   color: #DFEDEB;
   padding: 80px 0 0 0;
   text-align: center; }
 
 .Footer-sub {
+  background: #14191F;
   border-top: 1px solid #2D3031;
   margin-top: 24px;
   padding: 24px; }
@@ -514,10 +526,10 @@ footer {
 
 .Button-secondary {
   background: none;
-  border: 1px solid #20877C;
-  color: #20877C; }
+  border: 1px solid #E4CA2F;
+  color: #fff; }
   .Button-secondary:hover {
-    border: 1px solid #2FA095;
+    border: 1px solid #FCEC89;
     color: #fcfcfc; }
 
 .Social {
@@ -536,7 +548,7 @@ footer {
   background-repeat: no-repeat;
   display: inline-block;
   height: 24px;
-  margin: 0 0 0 8px;
+  margin: 0 0 0 16px;
   text-indent: -9999px;
   width: 24px;
   transition: transform .5s; }
@@ -562,7 +574,8 @@ footer {
 
 @media (min-width: 768px) {
   .Masthead {
-    height: 632px; } }
+    height: 583px;
+    padding: 0; } }
 .Work-short {
   border-bottom: 1px solid #e6e6e6;
   margin: 0 0 80px 0;
@@ -615,10 +628,12 @@ footer {
 .Image {
   background: #fff;
   border: 1px solid #e6e6e6;
-  padding: 16px; }
+  margin: 16px;
+  padding: 8px; }
 
 .Pagination {
-  margin: 0 0 48px 0; }
+  margin: 0;
+  padding: 0 0 48px 0; }
 
 .Pagination li {
   display: inline-block; }
@@ -629,6 +644,9 @@ footer {
   display: inline-block;
   height: 30px;
   width: 30px; }
+
+.Pagination-button-dark {
+  background: #14191F; }
 
 .Pagination-button:hover {
   background: #f4f4f4;
@@ -4000,7 +4018,7 @@ footer {
   border-radius: 4px; }
 
 .Thumbnail-title {
-  background: #20877C;
+  background: #E4CA2F;
   -webkit-border-top-left-radius: 4px;
   -webkit-border-bottom-right-radius: 4px;
   -moz-border-radius-topleft: 4px;

@@ -1,5 +1,6 @@
 .Pagination {
-	margin:0 0 $su-xxlarge 0;
+	margin: 0;
+	padding:0 0 $su-xxlarge 0;
 }
 	.Pagination li {
 		display: inline-block;
@@ -10,6 +11,9 @@
 			display: inline-block;
 			height: 30px;
 			width: 30px;
+		}
+		.Pagination-button-dark {
+			background:#14191F;
 		}
 		.Pagination-button:hover {
 			background: #f4f4f4;

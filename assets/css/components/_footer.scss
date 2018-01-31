@@ -1,11 +1,12 @@
 footer {
-	background:                #0f1318;
+	background: #0f1318 url('../img/footer_back.png') repeat-x left top;
 	border-top:     1px solid $divider; 
 	color:                     #DFEDEB;
 	padding:       $su-xxxxlarge 0 0 0;
 	text-align:                 center;
 }
 .Footer-sub {
+	background: #14191F;
 	border-top:1px solid $primary--hover;
 	margin-top: $su-large;
 	padding: $su-large;
