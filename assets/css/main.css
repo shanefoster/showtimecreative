@@ -696,6 +696,11 @@ footer {
   background: #fcfcfc url("../img/home.svg") no-repeat center center;
   background-size: 50%; }
 
+blockquote {
+  font-size: 21px;
+  font-style: italic;
+  margin: 24px 0; }
+
 .u-verticalAlignTop {
   vertical-align: top !important; }
 
