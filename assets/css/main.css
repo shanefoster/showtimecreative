@@ -322,6 +322,15 @@ h4, h5, h6 {
 ul, ol {
   margin: 16px; }
 
+.list--bordered {
+  margin: 24px 0; }
+  .list--bordered li {
+    border-bottom: 1px solid #e6e6e6;
+    list-style-position: inside;
+    padding: 16px 0; }
+    .list--bordered li:first-child {
+      border-top: 1px solid #e6e6e6; }
+
 header {
   padding: 24px 0;
   position: relative;

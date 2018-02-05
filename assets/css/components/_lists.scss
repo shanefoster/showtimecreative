@@ -1,3 +1,16 @@
 ul, ol {
   margin:$su-default;
 }
+.list--bordered {
+	margin: $su-large 0;
+
+	li {
+		border-bottom: 1px solid $divider;
+		list-style-position: inside;
+		padding: $su-default 0;
+
+		&:first-child {
+			border-top:1px solid $divider;
+		}
+	}
+}
