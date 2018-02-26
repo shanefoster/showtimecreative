@@ -1,6 +1,6 @@
 // * 1. Base Typography Units
 
-$fontSize:          13px !default;
+$fontSize:          14px !default;
 $lineHeight:         1.5 !default;
 $letterSpacing: .025em !default;
 
@@ -74,7 +74,7 @@ p, li, pre, code  {
   line-height: $base-lineHeight;
 }
 p {
-  margin-bottom: $su-default;
+  margin: 0 auto $su-default auto;
 }
 
 b,

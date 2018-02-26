@@ -25,7 +25,10 @@
     clear: both;
   }
 }
-
+.Container--text {
+  margin: 0 auto;
+  max-width: 65%;
+}
 [class*="__row"] {
   padding-top:    ( $su-default * 0.34 );
   padding-bottom: ( $su-default * 0.34 );
