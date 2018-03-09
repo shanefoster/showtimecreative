@@ -1,10 +1,13 @@
 .Masthead {
-	padding:    $su-xxlarge 0;
-	text-align:        center;
+	background-size:50%;
+	background-position:bottom right;
+	background-repeat:no-repeat;
+	border-bottom:1px solid $divider;
+	padding: $su-xxlarge 0;
+	text-align: center;
 }
 @media (min-width: $breakpoint-sm) { 
   .Masthead {
-    height: 583px;
-    padding: 0;
+    padding: 240px 0;
   }
 }

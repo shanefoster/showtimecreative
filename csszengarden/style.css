@@ -1,0 +1,407 @@
+/* css Zen Garden default style v1.02 */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
+/* This file based on 'Tranquille' by Dave Shea */
+/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
+/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+
+/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
+/*
+
+
+
+1= Global
+2= Header
+3= Summary
+4= Main
+5= Footer
+6= Sidebar
+7= Responsive
+
+
+
+/* 1= Global
+--------------------------------*/
+
+@import url(http://fonts.googleapis.com/css?family=Ruda:700);
+
+html {
+	margin: 0;
+	padding: 0;
+	}
+body { 
+	font-family: 'Avenir', Arial, sans-serif;
+	line-height: 1.88889;
+	color: #6c78a0; 
+	margin: 0; 
+	padding: 0;
+	}
+p { 
+	margin-top: 0; 
+	}
+a { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #db3b47;
+	}
+a:visited { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #D4CDDC;
+	}
+a:hover, a:focus, a:active { 
+	text-decoration: underline; 
+	color: #c32935;
+	}
+abbr {
+	border-bottom: none;
+	}
+	h3 {
+	    font-family: Ruda, Arial, cursive;
+	    color: #404876;
+	    font-size: 2em;
+	    line-height: 1.25em;
+	    margin:0 0 1em 0;
+	    text-align: center;
+	    text-transform: uppercase;
+	}
+/*--------------------------------*/
+
+
+
+
+
+/* 2= Header
+--------------------------------*/
+header {
+    background: url('vegas_sign.png'), url('vegas_skyline.png');
+    background-position: center bottom, center top;
+    background-repeat: no-repeat, repeat-x;
+    background-size: contain;
+    background-color: #252b3d;
+    max-height: 763px;
+    overflow: hidden;
+    padding: 0 0 10em 0;
+    position: relative;
+    text-align: center;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+/*--------------------------------*/
+
+
+/* 3= Summary
+--------------------------------*/
+div[role=article].summary {
+    background-color: #db3b47;
+    color: #fff;
+    font-family: Ruda, "Helvetica Neue", Arial, sans-serif;
+    padding: 2em;
+    text-align: center;
+}
+    .summary p {
+        font-size: 1em;
+        margin: 0 auto;
+        max-width: 860px;
+    }
+    .summary p:last-child {
+        padding-top: 1em;
+    }
+    .summary a {
+        color: #fff;
+        font-weight: bold;
+        text-decoration: underline;
+        text-transform: uppercase;
+    	}
+    .summary a:hover {
+        text-decoration: none;
+    }
+    .summary a::before {
+        background-image: url('vegas_icons.svg');
+        background-position: -110px 0px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        content: '';
+        display: inline-block;
+        height: 20px;
+        margin-right: 3px;
+        width: 20px;
+    }
+/*--------------------------------*/
+
+
+/* 4= Main
+--------------------------------*/
+div[role=article] {
+    border-bottom: 1px solid #ededed;
+    padding: 2em 10%;
+}
+div[role=article] > p:last-child {
+    margin-bottom: 0;
+}
+.requirements > p, .requirements h3 {
+    padding: 0 10%;
+}
+.requirements h3 {
+    padding-top: 1em;
+}
+.preamble h3::after, .explanation h3::after, .benefits h3::after, .participation h3::after, .requirements h3::after{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: '';
+    display: block;
+    height: 204px;
+    margin: 0 auto;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+}
+.preamble h3::after {
+        background-image: url('vegas_chips.svg');
+}
+.explanation h3::after {
+        background-image: url('vegas_cards.svg');
+}
+.benefits h3::after {
+        background-image: url('vegas_slots.svg');
+}
+.participation h3::after {
+        background-image: url('vegas_drinks.svg');
+}
+.requirements h3::after {
+        background-image: url('vegas_dice.svg');
+}
+.requirements p:last-child {
+    background: #f4d950;
+    color: #a0880d;
+    font-family: Ruda, "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.5em;
+    margin: 3em 0 0 0;
+    padding: 2em 5% 0 5%;
+    text-align: center;
+}
+.requirements p:last-child a {
+    color: #a0880d;
+    font-weight: 700;
+}
+div[role=article].requirements {
+    border-bottom: none;
+    padding: 0;
+}
+/*--------------------------------*/
+
+
+/* 5= Footer
+--------------------------------*/
+footer {
+	background: #f4d950;
+	font-size: 1.25em;
+	padding: 1em 2.5% 2em 2.5%;
+	text-align:center;
+}
+footer a {
+	color:#fff;
+	margin: 0 .25em;
+	padding: .1em 0;
+}
+footer a:hover {
+	border-bottom:3px solid #a0880d;
+	color:#fff;
+	text-decoration:none;
+}
+/*--------------------------------*/
+
+
+/* 6= Sidebar
+--------------------------------*/
+.sidebar {
+	background-color:#242940;
+	font-family: Ruda, "Helvetica Neue", Arial, sans-serif;
+	overflow: hidden;
+}
+	.sidebar h3 {
+		background-color:#1c202e ;
+		color:#fff;
+		margin:0;
+		padding:.5em 0;
+	}
+	.sidebar ul {
+		margin:0;
+		padding: 0;
+	}
+		.sidebar li {
+			border-bottom:1px solid #1d2133;
+			list-style:none;
+			padding:1em 8%;
+			text-align: center;
+		}
+		.sidebar li a {
+			color:#fff;
+			font-weight: 300;
+		}
+		.sidebar li:hover {
+		    background-color: #22263E;
+		}
+		.sidebar li a.design-name {
+		    color: #f4d950;
+		    display: block;
+		}
+		.design-archives li .indicator {
+		    color: #f3d94e;
+		}
+		.zen-resources li a {
+			display: block;
+		}
+        .zen-resources li a::before {
+            background-image: url('vegas_icons.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            content: '';
+            display: inline-block;
+            height: 20px;
+            width: 20px;
+        }
+        .zen-resources li.view-css a::before {
+            background-position:  3px 1px;
+        }
+        .zen-resources li.css-resources a::before {
+            background-position:  -38px 0px;
+        }
+        .zen-resources li.zen-faq a::before {
+            background-position:  -56px 0px;
+        }
+        .zen-resources li.zen-submit a::before {
+            background-position:  -18px 0px;
+        }
+        .zen-resources li.zen-translations a::before {
+            background-position:  -80px 0px;
+        }
+/*--------------------------------*/
+
+
+/* 7= Responsive
+--------------------------------*/
+@media only screen and (min-width: 480px) {   
+    header {
+        padding-top: 10em;
+    }
+    .preamble h3::after, .explanation h3::after, .benefits h3::after, .participation h3::after, .requirements h3::after {
+        margin-top: 1em;
+    }
+} 
+@media only screen and (min-width: 600px) {
+    header {
+        padding-top: 13em;
+    }
+    .sidebar li {
+        text-align: left;
+    }
+	.design-selection, .design-archives, .zen-resources {
+		float:left;
+		overflow:hidden;
+		width:50%;
+	}
+	.design-selection li {
+		border-right:1px solid #1d2133;
+	}
+	div[role=article] {
+	    overflow: hidden;
+	    position: relative;
+	}
+}
+@media only screen and (min-width: 900px) {
+    header {
+        padding-top: 20em;
+    }
+	div[role=article].summary {
+	    padding: 3em;
+	    font-size: 1.5em;
+    }
+    .preamble h3::after, .explanation h3::after, .benefits h3::after, .participation h3::after, .requirements h3::after {
+        margin: 0;
+    }
+    .preamble h3, .preamble p {
+        clear: right;
+        float: right;
+        text-align: left;
+        width: 60%;
+    }
+    .preamble h3:after {
+        position: absolute;
+        left: 10%;
+        width: 30%;
+    }
+    .main div[role=article] h3,  .main div[role=article] p{
+        clear: left;
+        float: left;
+        text-align: left;
+        width: 60%;
+    }
+    .main div[role=article] h3:after {
+        position: absolute;
+        right: 10%;
+        width: 30%;
+    }
+    .main div[role=article]:nth-child(even) h3, .main div[role=article]:nth-child(even) p {
+        clear: right;
+        float: right;
+    }
+    .main div[role=article]:nth-child(even) h3:after {
+        position: absolute;
+        right: 60%;
+        width: 30%;
+    }
+    div[role=article].requirements {
+        padding-top: 4em;
+    }
+    .requirements p:last-child{
+        padding-top: 3em;
+    }
+    footer {
+        padding-bottom: 3em;
+    }
+    	footer a {
+    	margin: 0 2em;
+    
+    	}
+    	.main div[role=article].requirements > p, .main div[role=article].requirements > h3 {
+    	    padding: 0 10%;
+    	    width: 48%;
+    	}
+    	.main div[role=article] p[role=contentinfo] {
+    	    box-sizing: border-box;
+        	padding: 2em 10% 0 10%;
+        	text-align: center;
+        	width: 100%;
+    	}
+    	.intro > .preamble, .main > div {
+    	    padding: 4em 10%;
+    	}
+    	.main > div.benefits {
+    	    padding-bottom: 4em;
+    	}
+}
+@media only screen and (min-width: 1200px) { 
+    header {
+        padding-top: 35em;
+    }
+    .main div[role=article] p[role=contentinfo] {
+    	padding: 2em 15% 0 15%;
+    }
+    .main > div.benefits {
+        padding-bottom: 6em;
+    }
+}
+@media only screen and (min-width: 1400px) { 
+    header {
+        padding-top: 35em;
+    }
+    .main div[role=article] p[role=contentinfo] {
+    	padding: 2em 25% 0 25%;
+    }
+    .main > div.benefits {
+        padding-bottom: 8em;
+    }
+}

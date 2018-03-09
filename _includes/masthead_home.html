@@ -1,0 +1,21 @@
+<div class="Grid-cell u-size-full {{ headerDetails }}">
+  {% if page.url == "/" %}
+    <img class="Header-ginger" src="assets/img/shane_foster_designer.jpg">
+  {% endif %}
+
+  
+  <p class="Header-tagline u-spaceBottomNone">
+    {% if page.tagline %}{{page.tagline}}{% endif %}
+  </p>
+  <h1 class="Header-title">
+    {{ page.title }}
+  </h1>
+    {% if page.url == "/" %}
+      <!-- <small>(I'M ALSO PRETTY TALL)</small> -->
+    {% else %}
+      <p class="Header-subtitle">
+        {{ page.date | date: "%Y" }}
+      </p>
+      {% include pagination.html %}
+    {% endif %}
+</div>
