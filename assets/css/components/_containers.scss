@@ -25,9 +25,20 @@
     clear: both;
   }
 }
+
 .Container--text {
   margin: 0 auto;
-  max-width: 65%;
+  width:85%;
+}
+@media (min-width: $breakpoint-sm) { 
+  .Container--text {
+    max-width: 75%;
+  }
+}
+@media (min-width: $breakpoint-md) { 
+  .Container--text {
+    max-width: 65%;
+  }
 }
 [class*="__row"] {
   padding-top:    ( $su-default * 0.34 );

@@ -1,0 +1,33 @@
+{% if page.url == "/" %}
+  {% assign screen_shots = 'background:#fcfcfc;' %}
+{% elsif page.title == 'DanceLinked' %}
+  {% assign screen_shots = '/assets/img/work/dancelinked/dancelinked_screens_devices.png' %}
+{% elsif page.title == 'TeamSnap' %}
+  {% assign screen_shots = '/assets/img/work/teamsnap/teamsnap_screens_devices.png' %}
+{% elsif page.title == 'AppNexus – Tango' %}
+  {% assign screen_shots = '/assets/img/work/tango/tango_screens_devices.png' %}
+{% elsif page.title == 'AppNexus – ANM' %}
+  {% assign screen_shots = '/assets/img/work/anm/anm_screens_devices.png' %}
+{% elsif page.title == 'Fantuition' %}
+  {% assign screen_shots = '/assets/img/work/fantuition/fantuition_screens_devices.png' %}
+{% elsif page.title == 'University of Oregon Dance Team' %}
+  {% assign screen_shots = '/assets/img/work/uodance/uodt_screens_devices.png' %}
+{% elsif page.title == 'CSS Zen Garden – Vegas' %}
+  {% assign screen_shots = '/assets/img/work/csszengarden/csszengarden_screens_devices.png' %}
+{% endif %}
+
+<div class="Grid Grid--alignMiddle">
+  <div class="Grid-cell u-size-full u-sm-size1of4 u-flex u-flexCol u-flexNoWrap">
+    <h1 class="Header-title">
+      {{ page.title }}
+    </h1>
+        <p class="Header-subtitle">
+          {{ page.date | date: "%Y" }}
+        </p>
+        {% include pagination.html %}
+    </p>
+  </div>
+  <div class="Grid-cell u-size-full u-sm-size3of4 u-flex u-flexCol u-flexNoWrap">
+    <img src="{{ screen_shots }}" />
+  </div>
+</div>

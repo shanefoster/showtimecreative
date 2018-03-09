@@ -1,53 +1,66 @@
-<header class="Header" role="banner">
-  <div class="Container">
-    <div class="Grid Grid--alignMiddle">
-      <div class="Grid-cell u-size1of2">
-        {% assign default_paths = site.pages | map: "path" %}
-        {% assign page_paths = site.header_pages | default: default_paths %}
-        <a class="Header-logo" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
-      </div>
-      <div class="Grid-cell u-size1of2 u-textRight">
-        <ul class="Social">
-          <li class="Social-item">
-            <a  target="_blank" class="Social-link Social-twitter-light" href="http://twitter.com/shane_foster14">Twitter</a>
-          </li>
-          <li class="Social-item">
-            <a target="_blank" class="Social-link Social-linkedin-light" href="https://www.linkedin.com/in/shanetfoster">LinkedIn</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="Masthead Grid">
-    <div class="Container">
-      {% if page.url == "/" %}
-        {% assign headerDetails = "Header-details-home"%}
-      {% else %}
-        {% assign headerDetails = "Header-details-work" %}
-      {% endif %}
-      <div class="Grid-cell u-size-full {{ headerDetails }}">
-        {% if page.url == "/" %}
-          <img class="Header-ginger" src="assets/img/shane_foster_designer_dark.jpg">
-        {% endif %}
+<!--
+{% if page.url == "/" %}
+  {% assign logo_back = 'background-image:url(/assets/img/showtime_creative_logo.svg);' %}
+  {% assign twitter_back = 'background-image:url(/assets/img/twitter_dark.svg);' %}
+  {% assign linkedin_back = 'background-image:url(/assets/img/linkedin_dark.svg);' %}
+{% else %}
+  {% assign logo_back = 'background-image:url(/assets/img/showtime_creative_logo_light.svg);' %}
+  {% assign twitter_back = 'background-image:url(/assets/img/twitter_light.svg);' %}
+  {% assign linkedin_back = 'background-image:url(/assets/img/linkedin_light.svg);' %}
+{% endif %}
 
-        
-        <p class="Header-tagline u-spaceBottomNone">
-          {% if page.tagline %}{{page.tagline}}{% endif %}
-        </p>
-        <h1 class="Header-title">
-          {{ page.title }}
-        </h1>
-          {% if page.url == "/" %}
-            <!-- <small>(I'M ALSO PRETTY TALL)</small> -->
-          {% else %}
-            <p class="Header-subtitle">
-              {{ page.date | date: "%Y" }}
-            </p>
-            {% include pagination.html %}
-          {% endif %}
-        </p>
+{% if page.url == "/" %}
+  {% assign header_back = 'background:#fcfcfc;' %}
+  {% assign header_bar_style = 'background:#fff;border-bottom:1px solid #eee;' %}
+{% elsif page.title == 'DanceLinked' %}
+  {% assign header_back = 'background:#FF6B6B;' %}
+{% elsif page.title == 'TeamSnap' %}
+  {% assign header_back = 'background:#1667AC;' %}
+{% elsif page.title == 'AppNexus – Tango' %}
+  {% assign header_back = 'background:#0F6161;' %}
+{% elsif page.title == 'AppNexus – ANM' %}
+  {% assign header_back = 'background:#FD8426;' %}
+{% elsif page.title == 'Fantuition' %}
+  {% assign header_back = 'background:#0093EB;' %}
+{% elsif page.title == 'University of Oregon Dance Team' %}
+  {% assign header_back = 'background:#349F77;' %}
+{% elsif page.title == 'CSS Zen Garden – Vegas' %}
+  {% assign header_back = 'background:#CC1C2C;' %}
+{% endif %}
+-->
+<header class="Header" role="banner">
+  <div class="Header__bar" >
+    <div class="Container">
+      <div class="Grid Grid--alignMiddle">
+        <div class="Grid-cell u-size1of2">
+          {% assign default_paths = site.pages | map: "path" %}
+          {% assign page_paths = site.header_pages | default: default_paths %}
+          <a class="Header-logo" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+        </div>
+        <div class="Grid-cell u-size1of2 u-textRight">
+          <ul class="Social">
+            <li class="Social-item">
+              <a target="_blank" class="Social-link Social-twitter" href="http://twitter.com/shane_foster14">Twitter</a>
+            </li>
+            <li class="Social-item">
+              <a target="_blank" class="Social-link Social-linkedin" href="https://www.linkedin.com/in/shanetfoster">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
+  {% if page.url != "/" %}
+    {% assign custpad = 'u-padBottomNone u-padTopXXLg' %}
+  {% endif %}
+    <div class="Masthead {{ custpad }}">
+      <div class="Container">
+        {% if page.url == "/" %}
+          {% include masthead_home.html %}
+        {% else %}
+          {% include masthead_work.html %}
+        {% endif %}
+      </div>
+    </div>
 </header>
 
