@@ -369,7 +369,7 @@ header {
   width: 72px; }
 
 .Header-tagline, .Header-subtitle {
-  color: #C4C4C4; }
+  color: #747474; }
 
 .Header-title {
   color: #393B3C;
@@ -1002,7 +1002,7 @@ blockquote {
   color: #fff !important; }
 
 .u-textAlt {
-  color: #C4C4C4 !important; }
+  color: #747474 !important; }
 
 /**
  * Display utilities
