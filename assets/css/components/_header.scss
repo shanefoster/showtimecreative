@@ -23,6 +23,7 @@ header {
 }
 .Header-tagline, .Header-subtitle {
 	color: $text--light;
+	margin: 0 0 $su-default 0;
 }
 .Header-title {
 	color:                 $text--dark;

@@ -1,8 +1,8 @@
 ul, ol {
-  margin:$su-default;
+  margin:$su-xlarge;
 }
 .list--bordered {
-	margin: $su-large 0;
+	margin: $su-xlarge $su-large;
 
 	li {
 		border-bottom: 1px solid $divider;

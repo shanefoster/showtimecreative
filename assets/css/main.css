@@ -43,6 +43,11 @@ section,
 summary {
   display: block; }
 
+figcaption {
+  font-size: 11px;
+  padding: 8px 0 0 0;
+  text-align: center; }
+
 html, body,
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
@@ -334,10 +339,10 @@ h4, h5, h6 {
   padding-bottom: 32px; }
 
 ul, ol {
-  margin: 16px; }
+  margin: 32px; }
 
 .list--bordered {
-  margin: 24px 0; }
+  margin: 32px 24px; }
   .list--bordered li {
     border-bottom: 1px solid #eee;
     list-style-position: inside;
@@ -369,7 +374,8 @@ header {
   width: 72px; }
 
 .Header-tagline, .Header-subtitle {
-  color: #747474; }
+  color: #747474;
+  margin: 0 0 16px 0; }
 
 .Header-title {
   color: #393B3C;
@@ -623,8 +629,7 @@ footer {
     float: left !important;
     width: auto !important; } }
 .Work-section {
-  padding: 48px;
-  text-align: center; }
+  padding: 48px 0; }
 
 .Work-section-arrow:after {
   background: transparent url("../img/arrow_down.svg") no-repeat center center;
@@ -636,7 +641,8 @@ footer {
 
 @media (min-width: 768px) {
   .Work-section {
-    padding: 16px; } }
+    margin: 0;
+    padding: 16px 0 4px 0; } }
 .Work-screenshot-img:hover {
   transform: translate(0, -5px); }
 
@@ -652,8 +658,11 @@ footer {
 .Image {
   background: #fff;
   border: 1px solid #eee;
-  margin: 16px;
+  margin: 32px 16px;
   padding: 8px; }
+
+.Image:hover {
+  pointer: hover; }
 
 .Pagination {
   margin: 0;
@@ -718,6 +727,12 @@ blockquote {
   font-size: 22px;
   font-style: italic;
   margin: 24px 0; }
+
+.Callout {
+  border: 1px solid #eee;
+  background: #fcfcfc;
+  margin: 32px 0;
+  padding: 16px; }
 
 .u-verticalAlignTop {
   vertical-align: top !important; }

@@ -25,8 +25,7 @@
   }
 }
 .Work-section {
-	padding:    $su-xxlarge;
-	text-align:      center;
+	padding:    $su-xxlarge 0;
 }
 .Work-section-arrow {
 		&:after {
@@ -40,7 +39,8 @@
 }
 @media (min-width: $breakpoint-sm) { 
   .Work-section {
-    padding:    $su-default;
+  	margin: 0;
+    padding:    $su-default 0 $su-xsmall 0;
   }
 }
 

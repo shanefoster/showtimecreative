@@ -1,6 +1,9 @@
 .Image {
 	background:          #fff;
 	border: 1px solid $divider;
-	margin: $su-default;
-	padding:      $su-small;
+	margin: $su-xlarge $su-default;
+	padding: $su-small;
+}
+.Image:hover {
+	pointer:hover;
 }
