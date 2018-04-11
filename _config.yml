@@ -16,11 +16,11 @@
 title: ShowtimeCreative
 email: shane@shwotimecreative.com
 description: >- # this means to ignore newlines until "baseurl:"
- Portolio of Portland, Oregon based Product Designer, Shane Foster.
+ Portolio of experienced Product Designer, Shane Foster.
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "showtimecreative.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://showtimecreative.com" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: shanefoster_14
+github_username:  shanefoster
 excerpt_separator: <!--more-->
 
 #Collections
