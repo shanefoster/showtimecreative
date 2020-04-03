@@ -9,12 +9,12 @@ header {
 	padding: $su-default 0;
 }
 .Header-logo {
-		background-image: url('../img/showtime_creative_logo.svg');
+		background-image: url('../img/shane-foster-design.svg');
 		background-position: center center;
 	  background-repeat: no-repeat;
 		display: block;
-		height: 40px;
-		width: 50px;
+		height: 45px;
+		width: 65px;
 		text-indent: -999em;
 }
 .Header-ginger {
@@ -26,7 +26,7 @@ header {
 	margin: 0 0 $su-default 0;
 }
 .Header-title {
-	color:                 $text--dark;
+	color:          $text--dark;
 	letter-spacing: $small-letterSpacing;
 	line-height:       $small-lineHeight;
 	margin: 0;
