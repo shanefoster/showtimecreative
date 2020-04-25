@@ -1,0 +1,62 @@
+---
+title: Cloudability
+image_path: /assets/img/work/cloudability/cloudability_screens.png
+date: 2018-04-04
+layout: work
+excerpt1: I did some stuff at Cloudability.
+---
+
+<div class="Container--text">
+	<h1>Cost Sharing – A Case Study</h1>
+	<img class="Image" src="/assets/img/work/cloudability/cost-sharing-full.png" />
+	<h2 class="Work-section">What Problem Are We Trying to Solve?</h2>
+	<p>As an organization, I need a method to allow me to achieve <strong>full allocation of cloud costs</strong> by dealing with costs that historically have been difficult to allocate due to their nature as 1) being untaggable costs like support charges, CloudWatch, etc. AND/OR 2) actual designated shared costs that are used by everyone (ex. email, etc.). </p>
+	<img class="Image" src="/assets/img/work/cloudability/cost-sharing-explained.png" />
+
+	<h2 class="Work-section">Who are We Designing for and Why?</h2>
+	<p>The <strong>target persona for this feature is a member of an org’s finance team</strong> (i.e. less cloud/tech savvy). Required to allocate cloud costs to their respective teams, they will typically run cost sharing calculations at the end of each month to configure chargeback. This is currently a manual process</p>
+	
+
+	<h2 class="Work-section">Measures of Success</h2>
+	<p>The measure of success in this instance is mostly user adoption, along with qualitative feedback. There may also be anecdotal evidence from our sales and customer-facing teams regarding new contracts and renewals. </p>
+
+	<h2 class="Work-section">Current Approach and Pain Points</h2>
+	<p>Based on research and interviews with users, we were able to get a better idea of how they are currently manually calculating and implementing cost sharing outside of Cloudability. By solving this problem within Cloudability <strong>we are aiming to save our customers time in messy spreadsheets, improve their accuracy and provide institutional-wide awareness of what one's attributed shared cost is in 'real time'</strong>.</p>
+	<p>I was also able to collaborate with the engineering team to gather insights from JSON api calls to see how users are currently approaching Cost Sharing from a technical.</p>
+	<img class="Image" src="/assets/img/work/cloudability/cost-sharing-json.png" />
+
+	<h2 class="Work-section">Kickoff & Exploration</h2>
+	<p>I like to have a kick-off meeting with my PM and engineering lead (or any resource from engineering) to answer any open questions, brainstorm ideas and get a general idea of scope, requirements and constraints. I want to make sure we are on the same page about the problem we are solving and why.  </p>
+	<p>During this exploration, it was discovered that there were could possibly be some serious technical limitations to consider when designing a solution for our users, based on the architecture of our app.</p>
+	<img class="Image" src="/assets/img/work/cloudability/cost-sharing-whiteboard1.png" />
+
+	<h2 class="Work-section"> The Path to MVP</h2>
+	<p>The initial exploration allowed me to get an idea of the user journey and flow. With my initial open questions answered, I can start sketching. I always start with pen and paper to quickly flesh out ideas and validate them. It allows me a way to create quick artifacts to gather feedback from. </p>
+
+	<h2 class="Work-section">User Testing & Validation</h2>
+	<p>The goal of user testing was to validate that our display of the cost sharing breakdown is comprehendible, digestible and easy to understand.</p>
+	<ul>
+		<li>Is it clear to the user where shared costs are coming from and how they are distributed across targets within that Business Dimension?</li>
+		<li>Is it clear to the user that cost sharing can only be enabled on one Business Dimension at a time?</li>
+	</ul>
+	<p>To do this, I constructed a high fidelity prototype in InVision. Because I put a lot of work into creating a modular UI kit within Sketch, it was quick and easy to create something to test in front of users.</p>
+	<img class="Image" src="/assets/img/work/cloudability/cost-sharing-prototype.png" />
+
+	<h2 class="Work-section"> Results</h2>
+	<p>The initial exploration allowed me to get an idea of the user journey and flow. With my initial open questions answered, I can start sketching. I always start with pen and paper to quickly flesh out ideas and validate them. It allows me a way to create quick artifacts to gather feedback from. </p>
+	<img class="Image" src="/assets/img/work/cloudability/cost-sharing-v1.png" />
+
+	<p>There are currently 10 organizations reaping the benefits of cost sharing within Cloudability. We have received multiple messages from users regarding the amount of time and headaches we have saved them each month thanks to this feature. There are four instances that I know where we closed new deals thanks to the release of Cost Sharing.</p>
+
+	<img class="Image" src="/assets/img/work/cloudability/cost-sharing-feedback.png" />
+
+	<h2 class="Work-section">Improvements for v2</h2>
+	<ul>
+		<li>We made a conscious decision to build this feature outside of our core app and reporting pipeline. This allowed us to build fast, test and iterate at speeds that would typically not be possible.</li>
+		<li>For v2, we are looking at incorporating Cost Sharing data into our core app and how that experience would affect other aspects of our data pipeline.</li>
+		<li>We are exploring more visual representations of the data is also being considered and tested (as seen in the first screen shot in this case study).</li>
+		<li>Feedback from our user tests show that users still want a more granular breakdown of the data. They also want the ability to assign multiple sources and targets, then assign a mode of sharing, then create another and group them all under one Cost Sharing rule.</li>
+	</ul>
+
+
+</div>
