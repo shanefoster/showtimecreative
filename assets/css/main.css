@@ -147,7 +147,7 @@ p {
 
 b,
 strong {
-  color: #393B3C;
+  color: #393B3E;
   font-weight: bolder; }
 
 small,
@@ -242,7 +242,7 @@ h6 {
   letter-spacing: 0.0197530864em; }
 
 h1, h2, h3 {
-  color: #0f1318; }
+  color: #393B3E; }
 
 /*--------------------/
    Element Spacing
@@ -378,7 +378,7 @@ header {
   margin: 0 0 16px 0; }
 
 .Header-title {
-  color: #393B3C;
+  color: #393B3E;
   letter-spacing: 0.0222222222em;
   line-height: 1.1851851852;
   margin: 0; }
@@ -407,7 +407,7 @@ footer {
 
 .Dropdown-menu {
   background-clip: padding-box;
-  background-color: #0f1318;
+  background-color: #393B3E;
   border: 1px solid #2D3031;
   border-radius: 4px;
   box-shadow: 0 0 3px rgba(112, 112, 112, 0.25);
@@ -514,7 +514,7 @@ footer {
   border-bottom-width: 2px;
   box-sizing: border-box;
   /* 1 */
-  color: #0f1318;
+  color: #393B3E;
   /* 2 */
   display: inline-block;
   font-weight: 400;
@@ -863,7 +863,7 @@ blockquote {
   [class*="align-center-lg"] {
     text-align: center; } }
 .u-bgPrimary {
-  background: #0f1318; }
+  background: #393B3E; }
 
 .u-borderRight {
   border-right: 1px solid #eee !important; }
@@ -1016,7 +1016,7 @@ blockquote {
   .u-lg-borderNone {
     border: 0 !important; } }
 .u-colorPrimary {
-  color: #0f1318 !important; }
+  color: #393B3E !important; }
 
 .u-headingAlt {
   color: #fff !important; }
