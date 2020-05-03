@@ -130,7 +130,7 @@ address {
 
 body {
   color: #707070;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-weight: 300;
   font-style: normal;
@@ -152,7 +152,7 @@ strong {
 
 small,
 .small-text {
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #707070;
   font-size: small-fontSize;
   letter-spacing: 0.0222222222em; }
@@ -201,12 +201,12 @@ blockquote {
     Base Headings
 /--------------------*/
 h1, h2, h3 {
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: normal;
   text-transform: uppercase; }
 
 h4, h5, h6 {
-  font-family: "Source Sans Pro", Helvetica, sans-serif; }
+  font-family: "Poppins", sans-serif; }
 
 h1 {
   font-size: 36px;

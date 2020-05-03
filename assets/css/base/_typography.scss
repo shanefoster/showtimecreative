@@ -8,7 +8,8 @@ $letterSpacing: .025em !default;
 
 // * 2.a Font Families
 
-$primary-fontFamily:    'Source Sans Pro', Helvetica, sans-serif !default;
+$primary-fontFamily:    'Poppins', sans-serif !default;
+$header-fontFamily:     'Poppins', sans-serif !default;
 
 
 // * 2.b Font Weights
@@ -47,7 +48,7 @@ $base-font-family: $primary-fontFamily !default;
 $base-font-color:  $text !default;
 $light-font-color: $text--light !default;
 
-$heading-font-family:                                  $primary-fontFamily !default;
+$heading-font-family:                                  $header-fontFamily !default;
 $sub-heading-font-family:                              $primary-fontFamily !default;
 
 $heading-font-color:                               $text--dark !default;
@@ -154,7 +155,7 @@ h1, h2, h3 {
 }
 
 h4, h5, h6 {
-  font-family:               $base-font-family;
+  font-family:            $sub-heading-font-family;
 }
 
 h1 {
