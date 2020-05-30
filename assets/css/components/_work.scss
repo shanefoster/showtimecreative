@@ -44,6 +44,10 @@
   }
 }
 
+.Work-screenshot-img {
+	border:1px solid $divider;
+	box-shadow: $box-shadow;
+}
 .Work-screenshot-img:hover {
 	transform: translate(0, -5px);
 }

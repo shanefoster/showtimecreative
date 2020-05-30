@@ -14,7 +14,7 @@ $su-xxxxlarge:   scaleGrid(10) !default; // 48px
 $responsive: true !default;
 
 $max-site-width: 1440px !default;
-$min-site-width: 1200px !default;
+$min-site-width: 1060px !default;
 
 $breakpoint-xs: 0;
 $breakpoint-sm: 0;
@@ -22,8 +22,8 @@ $breakpoint-md: 0;
 $breakpoint-lg: 0;
 
 @if $responsive == true {
-  $max-site-width: 1440px;
-  $min-site-width: 0;
+  $max-site-width: 1280px;
+  $min-site-width: 992px;
 
   $breakpoint-xs: 480px;
   $breakpoint-sm: 768px;

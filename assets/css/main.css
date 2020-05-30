@@ -5,7 +5,7 @@ html {
   box-sizing: border-box; }
 
 body {
-  background: #fcfcfc;
+  background: #fff;
   font-family: 'Source Sans Pro', Helvetica, sans-serif; }
 
 @media (min-width: 768px) {
@@ -129,7 +129,7 @@ address {
   padding: 8px 0; }
 
 body {
-  color: #707070;
+  color: #6e7479;
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-weight: 300;
@@ -147,13 +147,13 @@ p {
 
 b,
 strong {
-  color: #393B3E;
+  color: #27292B;
   font-weight: bolder; }
 
 small,
 .small-text {
   font-family: "Poppins", sans-serif;
-  color: #707070;
+  color: #6e7479;
   font-size: small-fontSize;
   letter-spacing: 0.0222222222em; }
 
@@ -195,15 +195,14 @@ blockquote {
   border-top: 3px #eee solid;
   border-bottom: 3px #eee solid; }
   blockquote strong {
-    color: #707070; }
+    color: #6e7479; }
 
 /*--------------------/
     Base Headings
 /--------------------*/
 h1, h2, h3 {
   font-family: "Poppins", sans-serif;
-  font-weight: normal;
-  text-transform: uppercase; }
+  font-weight: normal; }
 
 h4, h5, h6 {
   font-family: "Poppins", sans-serif; }
@@ -211,7 +210,7 @@ h4, h5, h6 {
 h1 {
   font-size: 36px;
   line-height: 1.8984375;
-  letter-spacing: 0.0506821632em; }
+  letter-spacing: 0; }
 
 h2 {
   font-size: 22px;
@@ -242,7 +241,7 @@ h6 {
   letter-spacing: 0.0197530864em; }
 
 h1, h2, h3 {
-  color: #393B3E; }
+  color: #27292B; }
 
 /*--------------------/
    Element Spacing
@@ -296,9 +295,16 @@ h4, h5, h6 {
 .Grid-cell--center {
   margin: 0 auto; }
 
+.box {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 24px;
+  margin: 32px; }
+
 .Container {
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: 1280px;
   padding: 0 24px; }
 
 @media (min-width: 768px) {
@@ -307,14 +313,14 @@ h4, h5, h6 {
 .Container {
   clear: both;
   margin: 0 auto;
-  max-width: 1440px; }
+  max-width: 1280px; }
   .Container:after {
     display: block;
     content: "";
     clear: both; }
 
 .Container--text {
-  margin: 0 auto;
+  margin: 32px auto;
   width: 85%; }
 
 @media (min-width: 768px) {
@@ -350,38 +356,39 @@ ul, ol {
     .list--bordered li:first-child {
       border-top: 1px solid #eee; }
 
+.list--inline li {
+  display: inline-block;
+  margin: 0 16px; }
+
 header {
   padding: 0;
   position: relative;
   text-align: center; }
+  header a {
+    color: #27292B;
+    text-decoration: none; }
 
 .Header__bar {
   background: #fff;
   border-bottom: 1px solid #eee;
-  padding: 16px 0; }
+  padding: 0; }
 
 .Header-logo {
-  background-image: url("../img/shane-foster-design.svg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  display: block;
-  height: 45px;
-  width: 65px;
-  text-indent: -999em; }
+  font-size: 18px; }
 
 .Header-ginger {
-  height: 72px;
-  width: 72px; }
+  height: 112px;
+  width: 112px; }
 
 .Header-tagline, .Header-subtitle {
-  color: #747474;
+  color: #6e7479;
   margin: 0 0 16px 0; }
 
 .Header-title {
-  color: #393B3E;
+  color: #27292B;
   letter-spacing: 0.0222222222em;
   line-height: 1.1851851852;
-  margin: 0; }
+  margin: 0 0 16px 0; }
 
 main {
   background: #fff;
@@ -407,10 +414,10 @@ footer {
 
 .Dropdown-menu {
   background-clip: padding-box;
-  background-color: #393B3E;
+  background-color: #27292B;
   border: 1px solid #2D3031;
   border-radius: 4px;
-  box-shadow: 0 0 3px rgba(112, 112, 112, 0.25);
+  box-shadow: 0 0 3px rgba(110, 116, 121, 0.25);
   margin: 0;
   padding: 0;
   position: absolute;
@@ -514,7 +521,7 @@ footer {
   border-bottom-width: 2px;
   box-sizing: border-box;
   /* 1 */
-  color: #393B3E;
+  color: #27292B;
   /* 2 */
   display: inline-block;
   font-weight: 400;
@@ -610,7 +617,7 @@ footer {
 
 @media (min-width: 768px) {
   .Masthead {
-    padding: 240px 0; } }
+    padding: 160px 0; } }
 .Work-short {
   border-bottom: 1px solid #eee;
   margin: 0 0 80px 0;
@@ -648,6 +655,10 @@ footer {
   .Work-section {
     margin: 0;
     padding: 16px 0 4px 0; } }
+.Work-screenshot-img {
+  border: 1px solid #eee;
+  box-shadow: 0 0 3px rgba(110, 116, 121, 0.25); }
+
 .Work-screenshot-img:hover {
   transform: translate(0, -5px); }
 
@@ -729,7 +740,6 @@ footer {
   background-size: 50%; }
 
 blockquote {
-  font-size: 22px;
   font-style: italic;
   margin: 24px 0; }
 
@@ -738,6 +748,13 @@ blockquote {
   background: #fcfcfc;
   margin: 32px 0;
   padding: 24px; }
+
+.nav a {
+  color: #6e7479;
+  font-size: 14px; }
+  .nav a.current {
+    color: #27292B;
+    font-weight: 400; }
 
 .u-verticalAlignTop {
   vertical-align: top !important; }
@@ -863,7 +880,7 @@ blockquote {
   [class*="align-center-lg"] {
     text-align: center; } }
 .u-bgPrimary {
-  background: #393B3E; }
+  background: #27292B; }
 
 .u-borderRight {
   border-right: 1px solid #eee !important; }
@@ -1016,13 +1033,13 @@ blockquote {
   .u-lg-borderNone {
     border: 0 !important; } }
 .u-colorPrimary {
-  color: #393B3E !important; }
+  color: #27292B !important; }
 
 .u-headingAlt {
   color: #fff !important; }
 
 .u-textAlt {
-  color: #747474 !important; }
+  color: #6e7479 !important; }
 
 /**
  * Display utilities
@@ -4064,7 +4081,7 @@ blockquote {
   position: relative; }
 
 .Thumbnail-image {
-  border-radius: 4px; }
+  border-radius: 8px; }
 
 .Thumbnail-title {
   background: #E4CA2F;
@@ -4075,7 +4092,7 @@ blockquote {
   border-top-left-radius: 4px;
   border-bottom-right-radius: 4px;
   bottom: 11px;
-  color: #707070;
+  color: #6e7479;
   padding: 4px 16px;
   position: absolute;
   right: 1px; }

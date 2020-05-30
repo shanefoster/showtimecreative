@@ -1,21 +1,18 @@
-<div class="Grid-cell u-size-full {{ headerDetails }}">
-  {% if page.url == "/" %}
-    <img class="Header-ginger" src="assets/img/shane_foster_designer.png">
-  {% endif %}
-
-  
-  <p class="Header-tagline u-spaceBottomNone">
-    {% if page.tagline %}{{page.tagline}}{% endif %}
-  </p>
-  <h1 class="Header-title">
-    {{ page.title }}
-  </h1>
-    {% if page.url == "/" %}
-      <!-- <small>(I'M ALSO PRETTY TALL)</small> -->
-    {% else %}
-      <p class="Header-subtitle">
-        {{ page.date | date: "%Y" }}
-      </p>
-      {% include pagination.html %}
-    {% endif %}
+<div class="Masthead {{ custpad }}">
+  <div class="Container">
+    <div class="Grid-cell u-size-1of2 {{ headerDetails }}">
+      <div class="Grid Grid--alignCenter Grid--alignMiddle">
+        <div class="Grid-cell u-md-size2of12 u-textcenter">
+            {% if page.url == "/" %}
+              <img class="Header-ginger" src="assets/img/shane_foster_designer.png">
+            {% endif %}
+        </div>
+        <div class="Grid-cell u-md-size8of12 u-textLeft">
+            <small class="Header-tagline u-spaceBottomNone">Welcome! I'm Shane &</small>
+            <h1 class="Header-title">I'm an experienced Product Designer.</h1>
+            <p>I design products that help people reach their goals. I code tem as well.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

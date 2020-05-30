@@ -2,24 +2,23 @@ header {
 	padding:0;
 	position: relative;
 	text-align:center;
+
+	a {
+		color:$primary;
+		text-decoration: none;
+	}
 }
 .Header__bar {
 	background: #fff;
 	border-bottom:1px solid $divider;
-	padding: $su-default 0;
+	padding: 0;
 }
 .Header-logo {
-		background-image: url('../img/shane-foster-design.svg');
-		background-position: center center;
-	  background-repeat: no-repeat;
-		display: block;
-		height: 45px;
-		width: 65px;
-		text-indent: -999em;
+	font-size: 18px;
 }
 .Header-ginger {
-	height:72px;
-	width: 72px;
+	height:112px;
+	width: 112px;
 }
 .Header-tagline, .Header-subtitle {
 	color: $text--light;
@@ -29,7 +28,7 @@ header {
 	color:          $text--dark;
 	letter-spacing: $small-letterSpacing;
 	line-height:       $small-lineHeight;
-	margin: 0;
+	margin: 0 0 16px 0;
 }
 main {
 	background: #fff;

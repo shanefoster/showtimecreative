@@ -32,12 +32,23 @@
   <div class="Header__bar" >
     <div class="Container">
       <div class="Grid Grid--alignMiddle">
-        <div class="Grid-cell u-size1of2">
-          {% assign default_paths = site.pages | map: "path" %}
-          {% assign page_paths = site.header_pages | default: default_paths %}
-          <a class="Header-logo" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+        <div class="Grid-cell u-sm-size1of8">
+          <a class="Header-logo" href="/"><strong>shane</strong>foster.</a>
         </div>
-        <div class="Grid-cell u-size1of2 u-textRight">
+        <div class="Grid-cell u-sm-size6of8 u-sm-textRight">
+          {% assign current = page.url | downcase | split: '/' %}
+          
+          <nav>
+            <ul class="nav list--inline">
+              <li><a href='/' {% if current[1] == null %}class='current'{% endif %}>Work</a></li>
+              <li><a href='/about' {% if current[1] == 'about' %}class='current'{% endif %}>About</a></li>
+              <li><a href='/contact' {% if current[1] == 'contact' %}class='current'{% endif %}>Contact</a></li>
+            </ul>
+          </nav>
+
+
+        </div>
+        <div class="Grid-cell u-sm-size1of8">
           <ul class="Social">
             <li class="Social-item">
               <a target="_blank" class="Social-link Social-twitter" href="http://twitter.com/shanefoster_14">Twitter</a>
@@ -56,14 +67,15 @@
   {% if page.url != "/" %}
     {% assign custpad = 'u-padBottomNone u-padTopXXLg' %}
   {% endif %}
-    <div class="Masthead {{ custpad }}">
-      <div class="Container">
-        {% if page.url == "/" %}
-          {% include masthead_home.html %}
-        {% else %}
-          {% include masthead_work.html %}
-        {% endif %}
-      </div>
-    </div>
+  
+  {% if page.url == "/" %}
+    {% include masthead_home.html %}
+  {% elsif page.title == "About" %}
+    {% include masthead_about.html %}
+  {% elsif page.title == "Contact" %}
+    {% include masthead_contact.html %}
+  {% else %}
+    {% include masthead_work.html %}
+  {% endif %}
 </header>
 

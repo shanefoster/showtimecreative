@@ -17,29 +17,3 @@
   {% assign logo_path = '/assets/img/work/fantuition/logo-fantuition.svg' %}
 {% endif %}
 
-<div class="Masthead {{ custpad }}">
-  <div class="Container">
-    <div class="Grid Grid--alignMiddle">
-      <div class="Grid-cell u-size-full u-sm-size1of3 u-flex u-flexCol u-flexNoWrap u-textLeft">
-        {% if logo_path  %}
-          <div class="Grid-cell u-md-size2of3">
-            <img src="{{ logo_path }}">
-          </div>
-        {% else %}
-          <h2 class="Header-title">{{works.title}}</h2>
-        {% endif %}
-        <h3 class="Header-title">
-          {{ page.subtitle }}
-        </h3>
-            <p class="Header-subtitle">
-              {{ page.date | date: "%Y" }}
-            </p>
-            {% include pagination.html %}
-        </p>
-      </div>
-      <div class="Grid-cell u-size-full u-sm-size2of3 u-flex u-flexCol u-flexNoWrap">
-        <img src="{{ screen_shots }}" />
-      </div>
-    </div>
-  </div>
-</div>

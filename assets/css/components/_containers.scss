@@ -27,7 +27,7 @@
 }
 
 .Container--text {
-  margin: 0 auto;
+  margin: $su-xlarge auto;
   width:85%;
 }
 @media (min-width: $breakpoint-sm) { 

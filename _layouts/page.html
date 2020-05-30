@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- HOME TEMPLATE -->
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <main aria-label="Content">
+
+      <div class="Container">
+        <div class="Grid Grid--alignCenter">
+          <div class="Grid-cell u-size-full">
+              {{ content }}
+          </div>
+        </div>
+        <div class="u-size-full u-textCenter u-padEndsLg">
+          {% include pagination.html %}
+        </div>
+      </div>
+    </main>
+
+    {% include footer.html %}
+  </body>
+
+</html>
+  

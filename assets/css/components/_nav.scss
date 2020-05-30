@@ -1,0 +1,11 @@
+.nav {
+	a {
+		color: $text--light;
+		font-size:     14px;
+
+		&.current {
+			color: $text--dark;
+			font-weight:  400;
+		}
+	}
+}

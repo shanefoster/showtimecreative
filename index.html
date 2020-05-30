@@ -16,12 +16,24 @@ tagline: WELCOME! MY NAME IS SHANE &
 {% endif %}
 	<div class="Work-short">
 		<div class="Grid Grid--alignMiddle {{ flexreverse }}">
-			<div class="Grid-cell u-md-size5of12">
+			<div class="Grid-cell u-md-size6of12">
 				<div class="Work-summary">
 					<div class="Grid Grid--alignMiddle">
-							<h2 class="Work-short-title">{{works.title}}</h2>
-							<p class="Work-short-date u-sm-spaceLeftMd u-sm-padLeftMd u-sm-borderLeft">{{ works.date | date: "%Y" }}</p>
+							{% if works.logo_path  %}
+								<div class="Grid-cell u-sm-size1of3">
+	          						<img src="{{works.logo_path}}">
+	          					</div>
+	          				{% else %}
+	          					<h2 class="Work-short-title">{{works.title}}</h2>
+	        				{% endif %}
+	        			
+	        			<div class="Grid-cell u-sm-size1of4">
+							<p class="Work-short-date u-sm-spaceLeftMd u-sm-padLeftMd u-sm-borderLeft u-sm-spaceBottomNone">{{ works.date | date: "%Y" }}</p>
+						</div>
 					</div>
+					
+					<h3 class="u-spaceTopMd">{{works.subtitle}}</h3>
+
 					<p>{{works.excerpt1}}</p>
 					<p>{{works.excerpt2}}</p>
 					<div class="u-displayBlock u-textCenter u-spaceEndsXXLg u-md-textLeft">
@@ -29,7 +41,7 @@ tagline: WELCOME! MY NAME IS SHANE &
 					</div>
 				</div>
 			</div>
-			<div class="Grid-cell u-md-size7of12 {{ imagealign }}">
+			<div class="Grid-cell u-md-size6of12 {{ imagealign }}">
 					<a href="{{works.url }}" class="Work-screenshot">
 						<img class="Work-screenshot-img" src="{{ works.image_path }}" alt="{{works.title }}">
 					</a>

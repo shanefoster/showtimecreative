@@ -151,7 +151,6 @@ blockquote {
 h1, h2, h3 {
   font-family:            $heading-font-family;
   font-weight:                          normal;
-  text-transform:                    uppercase;
 }
 
 h4, h5, h6 {
@@ -161,7 +160,7 @@ h4, h5, h6 {
 h1 {
   font-size:            $xxlarge-fontSize;
   line-height:   $base-lineHeight;
-  letter-spacing: $xxlarge-letterSpacing;
+  letter-spacing: 0;
 }
 
 
