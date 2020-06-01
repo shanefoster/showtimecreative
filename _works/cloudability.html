@@ -11,11 +11,13 @@ layout: work
 ---
 	
 <div class="Container--text">
-	<h2 class="Work-section">What Problem Are We Trying to Solve?</h2>
-	<p>As an organization, I need a method to allow me to achieve <strong>full allocation of cloud costs</strong> by dealing with costs that historically have been difficult to allocate due to their nature as:</p>
+	<h2 class="Work-section">WHAT PROBLEM ARE WE TRYING TO SOLVE AND WHY?</h2>
+	<p>How might we allow an organization to achieve <strong>full allocation of cloud costs?</strong> 
+		<p>Cloud costs have historically been difficult to allocate due to:</p>
 	<ol>
-		<li>Being untaggable costs like support charges, CloudWatch, etc. AND/OR</li> 
-		<li>Actual designated shared costs that are used by everyone (ex. email, etc.). </li>
+		<li>Billing reports being thousands of lines long and diffucilt to comprehend.</li>
+		<li>Many cloud costs are untaggable costs like support charges, CloudWatch, etc.</li> 
+		<li>Actual designated shared costs that are used by everyone (ex. email, etc.) are very difficult to track.</li>
 	</ol>
 
 </div>
@@ -23,12 +25,21 @@ layout: work
 	<img class="Image" src="/assets/img/work/cloudability/cost-sharing-explained.png" />
 
 <div class="Container--text">
-	<h2 class="Work-section">Who are We Designing for and Why?</h2>
+	<h2 class="Work-section">MY ROLE & RESPONSIBILITIES</h2>
+	<p><strong>The Team</strong> – Senior PM, Senior PD (Me), Engineering Manager, Engineering Lead and six software engineers (front and back-end).</p>
+	<ul>
+  		<li><strong>UX Design and Research</strong> – Responsible for research, usability testing, user flows, prototyping and all other UX deliverables for the feature.</li>
+  		<li><strong>Visual Design</strong> – Owned all visual styling and component creation. Responsible for providing any visual updates to our design system.</li>
+  	</ul>
+</div>
+
+<div class="Container--text">
+	<h2 class="Work-section">WHO ARE WE DESIGNING FOR & WHY?</h2>
 	<p>The <strong>target persona for this feature is a member of an org’s finance team</strong> (i.e. less cloud/tech savvy). Required to allocate cloud costs to their respective teams, they will typically run cost sharing calculations at the end of each month to configure chargeback. This is currently a manual process.</p>
 </div>
 
 <div class="Container--text">
-	<h2 class="Work-section">Measures of Success</h2>
+	<h2 class="Work-section">MEASURES OF SUCCESS</h2>
 	<p>The measures of success for this new feature will be: </p>
 </div>
 
@@ -54,7 +65,7 @@ layout: work
 </div>
 
 <div class="Container--text">
-	<h2 class="Work-section">Current Approach and Pain Points</h2>
+	<h2 class="Work-section">CURRENT APPROACH & PAIN POINTS</h2>
 	<p>Based on research and interviews with users, we were able to get a better idea of how they are currently manually calculating and implementing cost sharing outside of Cloudability. By solving this problem within Cloudability <strong>we are aiming to save our customers time in messy spreadsheets, improve their accuracy and provide institutional-wide awareness of what one's attributed shared cost is in 'real time'</strong>.</p>
 	<p>I was also able to collaborate with the engineering team to gather insights from JSON api calls to see how users are currently approaching Cost Sharing from a technical standpoint.</p>
 </div>
@@ -62,7 +73,7 @@ layout: work
 	<img class="Image" src="/assets/img/work/cloudability/cost-sharing-json.png" />
 
 <div class="Container--text">
-	<h2 class="Work-section">Kickoff & Exploration</h2>
+	<h2 class="Work-section">KICKFF & EXPLORATION</h2>
 	<p>I like to have a kick-off meeting with my PM and engineering lead (or any resource from engineering) to answer any open questions, brainstorm ideas and get a general idea of scope, requirements and constraints. I want to make sure we are on the same page about the problem we are solving and why.  </p>
 	<p>During this exploration, it was discovered that there were could possibly be some serious technical limitations to consider when designing a solution for our users, based on the architecture of our app.</p>
 </div>
@@ -70,10 +81,10 @@ layout: work
 	<img class="Image" src="/assets/img/work/cloudability/cost-sharing-whiteboard1.png" />
 
 <div class="Container--text">
-	<h2 class="Work-section"> The Path to MVP</h2>
+	<h2 class="Work-section">THE PATH TO MVP</h2>
 	<p>The initial exploration allowed me to get an idea of the user journey and flow. With my initial open questions answered, I can start sketching. I always start with pen and paper to quickly flesh out ideas and validate them. It allows me a way to create quick artifacts to gather feedback from. </p>
 
-	<h2 class="Work-section">User Testing & Validation</h2>
+	<h2 class="Work-section">USER TESTING & VALIDATION</h2>
 	<p>The goal of user testing was to validate that our display of the cost sharing breakdown is comprehendible, digestible and easy to understand.</p>
 	<ul>
 		<li><strong>As a user, it clear to the user where shared costs are coming from and how they are distributed across targets within that Business Dimension?</strong></li>
@@ -85,20 +96,21 @@ layout: work
 	<img class="Image" src="/assets/img/work/cloudability/cost-sharing-prototype.png" />
 
 <div class="Container--text">
-	<h2 class="Work-section"> Results</h2>
-	<p>After multiple user tests, we discovered that we needed a more detailed breakdown of the cost sharing data. It was confusing users to use one table. We needed to present the data in a more logical fashion: Your shared costs are one group. That cost is then allocated to all the targets below. </p>
+	<h2 class="Work-section"> RESULTS</h2>
+	<p>After multiple user tests, we discovered that we needed a more detailed breakdown of the cost sharing data. We were only using one table and including the shared cost information in that table. It was confusing to users what the totals were for shared cost and how they were allocated. <strong>We learned that we needed to present the data in a more logical fashion: Your shared costs are one in group (the first table you see below). That cost is then allocated to all the targets below.</p></strong>
 </div>
 
 	<img class="Image" src="/assets/img/work/cloudability/cost-sharing-v1.png" />
 
 <div class="Container--text">
+	<h2 class="Work-section">USER ADOPTION</h2>
 	<p>There are currently 10 organizations reaping the benefits of cost sharing within Cloudability. We have received multiple messages from users regarding the amount of time and headaches we have saved them each month thanks to this feature. There are four instances that I know where we closed new deals thanks to the release of Cost Sharing.</p>
 </div>
 
 	<img class="Image" src="/assets/img/work/cloudability/cost-sharing-feedback.png" />
 
 <div class="Container--text">
-	<h2 class="Work-section">Improvements for v2</h2>
+	<h2 class="Work-section">FUTURE IMPROVEMENTS</h2>
 	<ul>
 		<li>We made a conscious decision to build this feature outside of our core app and reporting pipeline. This allowed us to build fast, test and iterate at speeds that would typically not be possible.</li>
 		<li>For v2, we are looking at incorporating Cost Sharing data into our core app and how that experience would affect other aspects of our data pipeline.</li>
