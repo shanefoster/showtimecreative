@@ -11,11 +11,38 @@ excerpt2: I was the lead designer for this project, which included all UX, Visua
 
 <div class="Container--text">
 	<h2 class="Work-section">WHAT PROBLEM ARE WE TRYING TO SOLVE?</h2>
-	<p><strong>How might we make it faster and easier to manage and optimize the mediaton process when working with AppNexus?</strong> Currently, the mobile mediation process can be extremely time consuming and difficult, especially within our massive, enterprise Console product.</p>
+	<p><strong>How might we make it faster and easier to manage and optimize the mediaton process when working with AppNexus?</strong></p>
+	<p>Currently, the mobile mediation process can be extremely time consuming and difficult, especially within our massive, enterprise Console product.</p>
 </div>
 <div class="u-textCenter">
 	<img class="Image" src="/assets/img/work/anm/mediation-flows.png" />
 </div>
+
+<div class="Container--text">
+	<h2 class="Work-section">WHO ARE WE DESIGNING FOR?</h2>
+	<p>Typically, the responsibility of managing the mediation process is handled by an entry to mid-level campaign or account manager. This is a tedious task that is often performed on a daily basis. It is very important to the business, but often dreaded by the responsible party, due it's manual process.</p>
+</div>
+
+<div class="Container--text">
+	<h2 class="Work-section">MEASURES OF SUCCESS</h2>
+	<p>The measures of success for this new feature will be: </p>
+</div>
+
+<div class="Grid u-">
+	<div class="Grid-cell u-md-size1of2">
+		<div class="box">
+			<h2>50%</h2>
+			<p>Reduce the number of steps to find and edit a campaign by half.</p>
+		</div>
+	</div>
+	<div class="Grid-cell u-md-size1of2">
+		<div class="box">
+			<h2>50%</h2>
+			<p>Reduce the time spent performing mediation each day and week by 50%.</p>
+		</div>
+	</div>
+</div>
+
 
 <div class="Container--text">
 	<h2 class="Work-section">MY ROLE & RESPONSIBILITIES</h2>
@@ -29,29 +56,56 @@ excerpt2: I was the lead designer for this project, which included all UX, Visua
 </div>
 
 <div class="Container--text">
-  	<h2 class="Work-section">THE IDEA</h2>
-	<p>Leveraging our API, we could build an application outside of Console that simplified this important process for our clients, saving them valuable time, which would allow them to focus on other aspects of their business.</p>
+	
+	<h2 class="Work-section">CURRENT APPROACH & PAIN POINTS</h2>
+	
+	<p>As mentioned above, users currently have to use our enterprise application for mediation, which is clunky and a very frustrating time-consuming process. <strong>The current navigation requires multiple clicks to access your creatives and campaigns that are embedded deep within each Line Item.</strong> Most of these steps were described as unnecessary for mediation.</p>
+	
+	<p>Moreover, searched was being described as difficult to decipher. These organizations can have hundreds of campaigns and creatives. Trying to quickly find what they are looking for with confidence can be quite difficult. <strong>Search would be key</strong>.</p>
 
-	<h2 class="Work-section">THE APPROACH</h2>
-	<p>Throughout the initial testing of our MVP, a constant them was noted: Speed is king. When working in Console, access to specific campaigns would be nested deep within the application. The number of steps it took to locate and manage a specific campaign was a huge concern.</p>
-	<p>In our initial tests we noticed users uniquely naming their campaigns as a way to easily locate and identify them. Due to the large quantity of them, they were looking for a way to quickly identity them. It was clear campaign filtering and search would be vital to their workflow. Neither of these features were as prominent in our inital designs. The first step was to create a filtering system, shown below.</p>
+	<h2 class="Work-section">ITERATIONS & SOLUTIONS</h2>
+
+	<p>I took to my sketch pad to think about the information architecture that would solve these problems. It was imperative that the interactions focus on speed and discoverability of campaigns.</p>
+
 </div>
 
 <div class="u-textCenter">
-	<img class="Image" src="/assets/img/work/anm/ANM_Bids_Search.png" />
+	<img class="Image" src="/assets/img/work/anm/anm-sketches.jpg" />
 </div>
 
 <div class="Container--text">
-	<h2 class="Work-section">FILTERS</h2>
-	<p>The filters resulted in a huge decrease in time spent locating and managing campaigns, but the real key was going to be search. It needed to be upfront, discoverable and provide instant results. We tested a few options and found the greatest performance with the layout below.</p>
+
+	<p><strong>After multiple versions and user tests, we found that the most efficient solution for this specific problem was a Parent (Advertiser) to child relationship (Campaigns) that could be two levels deep</strong>. This eliminated a major issue in our enterprise application with the target campaign being nested multiple levels below the advertiser.</p>
+	<p><strong>Moreover, allowing the user to expand each table row to edit the details of each campaign resulted in a major increase in speed</strong>. This was opposed to a hierarchichal relationship where if a table campaign row was clicked, a user would access the details on a new child page.</p>
+
 </div>
+
 <div class="u-textCenter">
-	<img class="Image" src="/assets/img/work/anm/ANM_Bids_Filters.png" />
 	<img class="Image" src="/assets/img/work/anm/ANM_Bids.png" />
 </div>
+
 <div class="Container--text">
-	<h2 class="Work-section">INSIGHTS TO DELIGHT</h2>
-	<p>We greatly simplified the process to manage campaigns within ANM, however, many clients were still optimizing hundreds per advertiser. Gathering insights regarding performance and revenue was crucial. Allowing a user to quickly log in, review the current status of all their campaigns was extremely valuable. We received many feature requests for reporting, quick graphs and status updates for any campaigns with issues. The result of this work was the dashboard shown below.</p>
+	<p>Lastly, this solution allowed for quick inline editing of key targeting information that the user updates the most often, CPM being the most crucial. <strong>Again, this change resulted in a major decrease in the time it took to update all campaigns for mediation.</strong></p>
+</div>
+
+
+<div class="Container--text">
+	<h2 class="Work-section"> RESULTS</h2>
+	<p>We were able to successfully decrease the time spent discovering target campaigns to be edited by more than 50%.</p>
+	<p>The changes in IA also resulted in the steps to manually locate a campaign from 5 to 2.</p>
+	<img class="Image" src="/assets/img/work/anm/mediation-flows-improved.png" />
+</div>
+
+<div class="Container--text">
+	<h2 class="Work-section">FUTURE IMPROVEMENTS</h2>
+		<p>Expanding on search, users wanted the ability find groups of campaigns with sepcific attributes. <strong>We released a filtering system to allow them to better edit subsets of campaigns.</strong></p>
+</div>
+
+<div class="u-textCenter">
+	<img class="Image" src="/assets/img/work/anm/ANM_Bids_Filters.png" />
+</div>
+<div class="Container--text">
+	<p><strong>Rather than forcing users to manually located campaigns that need to be optimizied, we looked at ways to automate the process and provide more insights into their data.</strong> We received many feature requests for reporting, quick graphs and status updates for any campaigns that need addressing. The result of this work was the dashboard shown below.</p>
 </div>
 <div class="u-textCenter">
 	<img class="Image" src="/assets/img/work/anm/ANM_Dashboard.png" />
