@@ -37,7 +37,11 @@ tagline: WELCOME! MY NAME IS SHANE &
 					<p>{{works.excerpt1}}</p>
 					<p>{{works.excerpt2}}</p>
 					<div class="u-displayBlock u-textCenter u-spaceEndsXXLg u-md-textLeft">
-						<a href="{{works.url}}" class="Button">View Case Study →</a>
+                        {% if works.title  == 'moovel' or 'membio'  %}
+                            <p>Case Study Coming Soon→</p>
+                        {% else %}
+                            <a href="{{works.url}}" class="Button">View Case Study →</a>
+                        {% endif %}
 					</div>
 				</div>
 			</div>
