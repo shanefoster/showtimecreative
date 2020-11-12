@@ -37,8 +37,8 @@ tagline: WELCOME! MY NAME IS SHANE &
 					<p>{{works.excerpt1}}</p>
 					<p>{{works.excerpt2}}</p>
 					<div class="u-displayBlock u-textCenter u-spaceEndsXXLg u-md-textLeft">
-                        {% if works.title  == 'moovel' or 'membio'  %}
-                            <p>Case Study Coming Soon→</p>
+                        {% if works.title contains 'moovel' or works.title contains 'Membio' %}
+                            <p class="Button is-disabled">Case Study Coming Soon→</p>
                         {% else %}
                             <a href="{{works.url}}" class="Button">View Case Study →</a>
                         {% endif %}
@@ -46,9 +46,13 @@ tagline: WELCOME! MY NAME IS SHANE &
 				</div>
 			</div>
 			<div class="Grid-cell u-md-size6of12 {{ imagealign }}">
-					<a href="{{works.url }}" class="Work-screenshot">
+				{% if works.title contains 'moovel' or works.title contains 'Membio' %}
+                    <img class="Work-screenshot-img" src="{{ works.image_path }}" alt="{{works.title }}">
+                {% else %}
+                    <a href="{{works.url }}" class="Work-screenshot">
 						<img class="Work-screenshot-img" src="{{ works.image_path }}" alt="{{works.title }}">
 					</a>
+                {% endif %}
 			</div>
 		</div>
 	</div>
